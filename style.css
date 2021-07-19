@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+}
+.header{
+    height: 100vh;
+    width: 100%;
+    background-image: url(images/cover.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.website-name{
+   font-family: 'Pacifico', cursive;
+   font-size: 46px;
+}
+nav{
+    background-color: white;
+    display: flex;
+    padding: 0 10%;
+    justify-content: space-between;
+}
+.navbar{
+    flex: 1;
+    text-align: right
+}
+nav  a{
+    color: brown;
+    text-decoration:none;
+    font-size: 16px;
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 30px  15px 8px 10px;
+    position: relative;
+}
+.doctors{
+    width: 90%;
+    margin: auto;
+    height: 700px;
+    padding-top: 30px;
+}
+.doctors img{
+    width: 200px;
+    padding: 10px;
+}
+.box-1{
+    overflow: hidden;
+    float: left;
+    width: 20%;
+    padding: 25px;
+    box-shadow: 3px 3px 5px 6px #ccc;
+    margin: 15px;
+    box-sizing: border-box;
+    background-color: white;
+}
+.blogs{
+    height: 500px;
+    background-color: #F8F9FC;
+    margin-bottom: 20px;
+}
+footer{
+    height: 300px;
+}
