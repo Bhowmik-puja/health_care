@@ -9,6 +9,11 @@
     background-size: cover;
     position: relative;
 }
+.container{
+    width: 60%;
+    margin: auto;
+    padding-top: 100px;
+}
 .website-name{
    font-family: 'Pacifico', cursive;
    font-size: 46px;
@@ -61,4 +66,28 @@ nav ul li{
 }
 footer{
     height: 300px;
+}
+
+ /* doctor page css */
+.block{
+    float: left;
+    margin: 20px;
+    padding-left: 20px;
+
+}
+.block img{
+    width: 100px;
+}
+.block.details{
+    width: 60%;
+}
+.block a{
+    display: block;
+}
+.doctor-block{
+    height: 220px;
+    box-shadow: 3px 3px 5px 6px #ccc;
+    margin: 15px;
+    box-sizing: border-box;
+    background-color: white;
 }
