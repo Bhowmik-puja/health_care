@@ -23,16 +23,16 @@ require_once "header.php";
                         <a href="doctors.php">Doctors</a>
                     </li>
                     <li>
-                        <a href="">Blood Bank</a>
+                        <a href="#">Blood Bank</a>
                     </li>
                     <li>
-                        <a href="">Appointment</a>
+                        <a href="#">Appointment</a>
                     </li>
                     <li>
-                        <a href="">Login</a>
+                        <a href="#">Login</a>
                     </li>
                     <li>
-                        <a href="">SignIn</a>
+                        <a href="patientReg.php">SignIn</a>
                     </li>
                    
                 </ul>
