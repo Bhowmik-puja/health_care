@@ -1,8 +1,8 @@
 <?php
 $pdo= require_once"database.php";
-echo '<pre>';
-var_dump($_POST);
-echo '</pre>';
+// echo '<pre>';
+// var_dump($_POST);
+// echo '</pre>';
 if($_SERVER['REQUEST_METHOD']=='POST'){
 
 $firstName = $_POST['firstName'];
@@ -61,9 +61,9 @@ $stmt->execute();
             <input type="text" placeholder="Phone" name="phone">
             <input type="text" placeholder="telephone" name="telephone"><br>
             <span>Gender</span>
-            <input type="radio" name="gender"  value = "male"id="male">Male
-            <input type="radio" name="gender" value="female" id="female">female
-            <input type="radio" name="gender" value="other" id="other">other
+            <input type="radio" name="gender"  value = "male">Male
+            <input type="radio" name="gender" value="female" >female
+            <input type="radio" name="gender" value="other" checked>other
             <br>
             <span>Blood Group</span>
             <select  name="bloodgrp" >

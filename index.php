@@ -1,6 +1,9 @@
 <?php
 require_once "header.php";
+session_start(); 
+// echo $_SESSION['userlogin'];
  ?>
+
     <section class="header">
         <nav>
             <a href="index.php"><span class="website-name">Health Care</span></a>
@@ -19,12 +22,22 @@ require_once "header.php";
                     <li>
                         <a href="">Appointment</a>
                     </li>
+                    <?php if(!isset($_SESSION["userlogin"])):?>
                     <li>
-                        <a href="">Login</a>
+                        <a href="login.php">Login</a>
                     </li>
                     <li>
                         <a href="patientReg.php" >SignIn</a>
                     </li>
+                    <?php endif;?>
+                    <?php if(isset($_SESSION["userlogin"])):?>
+                    <li>
+                        <a href="logout.php" >Logout</a>
+                    </li>
+                    <li>
+                        <h3><?php echo 'Welcome, '.$_SESSION['name']?></h3>
+                    </li>
+                    <?php endif;?>
                 </ul>
             </div>
         </nav>
