@@ -34,7 +34,7 @@ $stmt->bindValue(':city',$city);
 $stmt->bindValue(':district',$district);
 $stmt->bindValue(':image',' ');
 $stmt->bindValue(':password',$password);
-$stmt->execute();
+$stmt->execute(header("location:login.php"));
 }
 ?>
 <!DOCTYPE html>
