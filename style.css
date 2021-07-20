@@ -28,6 +28,7 @@ nav{
     flex: 1;
     text-align: right
 }
+
 nav  a{
     color: brown;
     text-decoration:none;
@@ -39,6 +40,7 @@ nav ul li{
     padding: 30px  15px 8px 10px;
     position: relative;
 }
+
 .doctors{
     width: 90%;
     margin: auto;

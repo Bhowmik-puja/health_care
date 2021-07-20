@@ -20,10 +20,10 @@ require_once "header.php";
                         <a href="">Appointment</a>
                     </li>
                     <li>
-                        <a href="">SignIn</a>
+                        <a href="">Login</a>
                     </li>
                     <li>
-                        <a href="">Login</a>
+                        <a href="patientReg.php" >SignIn</a>
                     </li>
                 </ul>
             </div>
