@@ -29,7 +29,7 @@ require_once "header.php";
                         <a href="#">Appointment</a>
                     </li>
                     <li>
-                        <a href="#">Login</a>
+                        <a href="login.php">Login</a>
                     </li>
                     <li>
                         <a href="patientReg.php">SignIn</a>
@@ -61,7 +61,7 @@ require_once "header.php";
             <h4><?php echo ' '.$doctor['presentStatus']; ?></h4>
            <br>
             <br>
-            <a href="">Visit Profile</a>
+            <a href="">Book Appointment</a>
         </div>
         
     </div>

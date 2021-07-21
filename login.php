@@ -16,6 +16,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     if($stmt->rowCount() >0){
         $_SESSION['userlogin']=$_POST['email'];
         $_SESSION['name']=$profiles[0]['firstName'];
+        $_SERVER['id'] = $profiles[0]['id'];
         // var_dump($profiles);
         header("location: index.php");
     }

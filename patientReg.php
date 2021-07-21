@@ -45,6 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/regForm.css">
+    <!-- form validation -->
     <script type="text/javascript">
         function checkInputs() {
             const pass = document.getElementById('password').value.trim();
@@ -61,7 +62,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             }
         }
     </script>
-    <title>Document</title>
+    <!-- form validation -->
+    <title>Registration Form</title>
 </head>
 
 <body>

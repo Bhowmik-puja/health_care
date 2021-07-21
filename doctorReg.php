@@ -116,6 +116,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <label for="img">Select image:</label>
                 <input type="file" name="image" id="doctor_img">
             </div>
+            <div class="doctor_password">
+               <input type="password" name="password" placeholder="New password">
+               <input type="password" name="confPassword" placeholder="Conform Password">  
+          </div>
 
 
             <input type="submit" value="Submit" name="submit">
