@@ -4,7 +4,37 @@ $pdo = require_once "database.php";
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
+    $firstName = $_POST['firstName'];
+    $lastName = $_POST['lastName'];
+    $email = $_POST['email'];
+    $phone = $_POST['phone'];
+    $telephone = $_POST['telephone'];
+    $gender = $_POST['gender'];
+    $bloodGrp = $_POST['bloodgrp'];
+    $dob = $_POST['dob'];
+    $address = $_POST['address'];
+    $city = $_POST['city'];
+    $district = $_POST['district'];
+    // $image = $_POST['image'];
+    $password = $_POST['password'];
 
+
+    $stmt = $pdo->prepare("INSERT INTO patients (firstName,lastName,email,phone,telephone, gender, bloodGrp, dob,address,city,district,image,password) VALUES (:firstName,:lastName,:email,:phone,:telephone,:gender,:bloodGrp,:dob,:address,:city,:district,:image,:password)");
+
+    $stmt->bindValue(':firstName', $firstName);
+    $stmt->bindValue(':lastName', $lastName);
+    $stmt->bindValue(':email', $email);
+    $stmt->bindValue(':phone', $phone);
+    $stmt->bindValue(':telephone', $telephone);
+    $stmt->bindValue(':gender', $gender);
+    $stmt->bindValue(':bloodGrp', $bloodGrp);
+    $stmt->bindValue(':dob', $dob);
+    $stmt->bindValue(':address', $address);
+    $stmt->bindValue(':city', $city);
+    $stmt->bindValue(':district', $district);
+    $stmt->bindValue(':image', ' ');
+    $stmt->bindValue(':password', $password);
+    $stmt->execute(header('location:login.php'));
 }
 ?>
 <!DOCTYPE html>
