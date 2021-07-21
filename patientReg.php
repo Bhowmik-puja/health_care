@@ -34,8 +34,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $stmt->bindValue(':district', $district);
     $stmt->bindValue(':image', ' ');
     $stmt->bindValue(':password', $password);
-    $stmt->execute();
-    //    header('location:login.php')
+    $stmt->execute(header('location:login.php'));
+    //    
 }
 ?>
 <!DOCTYPE html>
