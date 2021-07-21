@@ -76,6 +76,11 @@
                <input type="text" name="doner_Zip_code" placeholder="ZIP/Post Code">  
           </div>
 
+          <div class="doner_password">
+               <input type="password" name="password" placeholder="New password">
+               <input type="password" name="confPassword" placeholder="Conform Password">  
+          </div>
+
 
          
          <input type="submit" value="Submit">

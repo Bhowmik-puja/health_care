@@ -77,6 +77,11 @@
                <input type="file" name="doctor_img"  id="doctor_img">
           </div>
 
+          <div class="doctor_password">
+               <input type="password" name="password" placeholder="New password">
+               <input type="password" name="confPassword" placeholder="Conform Password">  
+          </div>
+
          
          <input type="submit" value="Submit">
 
