@@ -6,7 +6,7 @@ $doctors = $stmt->fetchAll(PDO::FETCH_ASSOC);
 // echo '<pre>';
 // var_dump($doctors);
 // echo '</pre>';
-// ?>
+?>
 <?php
 require_once "header.php";
 ?>
@@ -52,11 +52,15 @@ require_once "header.php";
             <img src="images/dummy.jpg" alt="" >
         </div>
         <div class="block details">
-            <h3><?php echo $doctor['name']; ?></h3>
+            <h3><?php echo $doctor['fName'].' '.$doctor['lName']; ?></h3>
             <h4>Email:<?php echo ' '.$doctor['email']; ?></h4>
             <h4>Phone:<?php echo ' '.$doctor['phone']; ?></h4>
-            <p><?php echo ' '.$doctor['specialist']; ?></p>
-           <br> <br>
+            <h4><?php echo ' '.$doctor['specialist']; ?></h4>
+            <h4><?php echo ' '.$doctor['degree']; ?></h4>
+            <h4><?php echo ' '.$doctor['chamber']; ?></h4>
+            <h4><?php echo ' '.$doctor['presentStatus']; ?></h4>
+           <br>
+            <br>
             <a href="">Visit Profile</a>
         </div>
         
