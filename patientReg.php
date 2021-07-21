@@ -115,7 +115,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <small id="error2"></small>
             </div>
             <input type="submit" value="submit" class="btn">
-            <a href="doctorReg.php"> or Register As Doctor</a>
+            <a href="doctorReg.php"> or Register As Doctor</a> <br>
+            <a href="donorReg.php"> or Register As Donor</a>
         </form>
     </section>
 </body>

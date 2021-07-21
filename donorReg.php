@@ -15,7 +15,7 @@
 <body>
 <div class="main">
      <div class="heading">
-          Register as Doner<br>
+          Register as Donor<br>
           Create a account free  
      </div>
 
