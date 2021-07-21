@@ -1,26 +1,25 @@
-<?php 
-session_start(); 
+<?php
+session_start();
 $pdo = require_once "database.php";
-if($_SERVER['REQUEST_METHOD'] == 'POST'){
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = $_POST['email'];
-    $pass =($_POST['password']);
+    $pass = ($_POST['password']);
     $stmt = $pdo->prepare("SELECT * FROM patients WHERE email = :email AND password = :password");
-    $stmt->bindValue(':email',$email);
-    $stmt->bindValue(':password',$pass);
+    $stmt->bindValue(':email', $email);
+    $stmt->bindValue(':password', $pass);
     $stmt->execute();
     $profiles = $stmt->fetchAll();
     // echo '<pre>';
-    // var_dump($profiles);
+    // var_dump($profiles[0]['id']);
     // echo '</pre>';
-    
-    if($stmt->rowCount() >0){
-        $_SESSION['userlogin']=$_POST['email'];
-        $_SESSION['name']=$profiles[0]['firstName'];
-        $_SERVER['id'] = $profiles[0]['id'];
-        // var_dump($profiles);
+
+    if ($stmt->rowCount() > 0) {
+        $_SESSION['userlogin'] = $_POST['email'];
+        $_SESSION['name'] = $profiles[0]['firstName'];
+        $_SESSION['id'] = $profiles[0]['id'];
+        // var_dump($_SESSION['id']);
         header("location: index.php");
-    }
-    else{
+    } else {
         echo "<script>alert('Invalid email or password')</script>";
     }
 }

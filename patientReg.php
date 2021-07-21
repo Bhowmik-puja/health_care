@@ -17,24 +17,35 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $district = $_POST['district'];
     // $image = $_POST['image'];
     $password = $_POST['password'];
+    //  check if email already exist or not \\
+    $stmthandler = $pdo->prepare("SELECT * FROM patients WHERE email = :email");
+    $stmthandler->bindValue(':email', $email);
+    $stmthandler->execute();
+
+    if ($stmthandler->rowCount() > 0) {
+        echo "<script>alert('This email is already exists!!!!');</script>";
+    } else {
 
 
-    $stmt = $pdo->prepare("INSERT INTO patients (firstName,lastName,email,phone,telephone, gender, bloodGrp, dob,address,city,district,image,password) VALUES (:firstName,:lastName,:email,:phone,:telephone,:gender,:bloodGrp,:dob,:address,:city,:district,:image,:password)");
 
-    $stmt->bindValue(':firstName', $firstName);
-    $stmt->bindValue(':lastName', $lastName);
-    $stmt->bindValue(':email', $email);
-    $stmt->bindValue(':phone', $phone);
-    $stmt->bindValue(':telephone', $telephone);
-    $stmt->bindValue(':gender', $gender);
-    $stmt->bindValue(':bloodGrp', $bloodGrp);
-    $stmt->bindValue(':dob', $dob);
-    $stmt->bindValue(':address', $address);
-    $stmt->bindValue(':city', $city);
-    $stmt->bindValue(':district', $district);
-    $stmt->bindValue(':image', ' ');
-    $stmt->bindValue(':password', $password);
-    $stmt->execute(header('location:login.php'));
+        $stmt = $pdo->prepare("INSERT INTO patients (firstName,lastName,email,phone,telephone, gender, bloodGrp, dob,address,city,district,image,password) 
+                             VALUES (:firstName,:lastName,:email,:phone,:telephone,:gender,:bloodGrp,:dob,:address,:city,:district,:image,:password)");
+
+        $stmt->bindValue(':firstName', $firstName);
+        $stmt->bindValue(':lastName', $lastName);
+        $stmt->bindValue(':email', $email);
+        $stmt->bindValue(':phone', $phone);
+        $stmt->bindValue(':telephone', $telephone);
+        $stmt->bindValue(':gender', $gender);
+        $stmt->bindValue(':bloodGrp', $bloodGrp);
+        $stmt->bindValue(':dob', $dob);
+        $stmt->bindValue(':address', $address);
+        $stmt->bindValue(':city', $city);
+        $stmt->bindValue(':district', $district);
+        $stmt->bindValue(':image', ' ');
+        $stmt->bindValue(':password', $password);
+        $stmt->execute(header('location:login.php'));
+    }
 }
 ?>
 <!DOCTYPE html>
@@ -45,24 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/regForm.css">
-    <!-- form validation -->
-    <script type="text/javascript">
-        function checkInputs() {
-            const pass = document.getElementById('password').value.trim();
-            const pass2 = document.getElementById('cpassword').value.trim();
-            if (pass2 == pass) {
-                alert("registration success");
-                return true;
-            } else {
-                const pass = document.getElementById('password').style.borderColor = "red";
-                const pass2 = document.getElementById('cpassword').style.borderColor = "red";
-                document.getElementById("error").innerHTML = "Password does not match";
-                document.getElementById("error2").innerHTML = "Password does not match";
-                return false;
-            }
-        }
-    </script>
-    <!-- form validation -->
+    <script type="text/javascript" src="validation.js"></script>
     <title>Registration Form</title>
 </head>
 
@@ -76,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <input type="text" placeholder="First Name" name="firstName" required>
             <input type="text" placeholder="Last Name" name="lastName" required><br>
             <input type="email" placeholder="Email" name="email" required><br>
-            <input type="text" placeholder="Phone" name="phone" required>
+            <input type="tel" placeholder="Phone" name="phone" required>
             <input type="text" placeholder="telephone" name="telephone"><br>
             <span>Gender</span>
             <input type="radio" name="gender" value="male">Male
