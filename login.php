@@ -35,7 +35,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="css/login.css">
+    <!-- <script defer src="login.js"></script> -->
     <title>Login</title>
 </head>
 
@@ -50,18 +51,19 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                             <h3 class="text-center text-info">Login</h3>
                             <div class="form-group">
                                 <label for="username" class="text-info">Email:</label><br>
-                                <input type="text" name="email" id="username" class="form-control">
+                                <input type="email" name="email" id="email" class="form-control" required>
                             </div>
                             <div class="form-group">
                                 <label for="password" class="text-info">Password:</label><br>
-                                <input type="password" name="password" id="password" class="form-control">
+                                <input type="password" name="password" id="password" class="form-control" required>
                             </div>
                             <div class="form-group">
                                 <br>
                                 <input type="submit" name="submit" class="btn btn-info btn-md" value="submit">
                             </div>
                             <div id="register-link" class="text-right">
-                                <a href="index.php" class="text-info">Register here</a>
+                                <span>Don't have an account?</span>
+                                <a href="patientReg.php" class="text-info">Register here</a>
                             </div>
                         </form>
                     </div>
