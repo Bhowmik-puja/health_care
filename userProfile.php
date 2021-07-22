@@ -1,5 +1,5 @@
 <?php
- session_start();
+session_start();
 if (!isset($_SESSION['id'])) {
     echo "Access Denied";
     exit();
@@ -11,9 +11,14 @@ if (!isset($_SESSION['id'])) {
     $stmt->bindValue(':id', $id);
     $stmt->execute();
     $profile = $stmt->fetchAll(PDO::FETCH_ORI_FIRST);
+    $patientId = $id;
+    $stmt2 = $pdo->prepare("SELECT * FROM appointment WHERE patientId = :id");
+    $stmt2->bindValue(':id', $patientId);
+    $stmt2->execute();
+    $appointments = $stmt2->fetchAll();
 }
 // echo '<pre>';
-// var_dump($profile);
+// var_dump($appointments);
 // echo '</pre>';
 ?>
 <!DOCTYPE html>
@@ -23,6 +28,18 @@ if (!isset($_SESSION['id'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        table,
+        td,
+        th {
+            border: 1px solid black;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+    </style>
     <title>Document</title>
 </head>
 
@@ -55,6 +72,29 @@ if (!isset($_SESSION['id'])) {
         <div>
             <h4>Address: <?php echo ' ' . $profile[0]['address']; ?> </h4>
         </div>
+    </div>
+    <div>
+        <h3 style="text-align: center;">Appointment Dashboard:</h3>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Serial</th>
+                    <th scope="col">Doctor Name</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach ($appointments as $i=> $row) : ?>
+                    <tr>
+                        <th ><?PHP echo $i+1;?></th>
+                        <td><?php echo $row['doctorName']?></td>
+                        <td><?php echo $row['date']?></td>
+                        <td><?php echo $row['time']?></td>
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
     </div>
 </body>
 

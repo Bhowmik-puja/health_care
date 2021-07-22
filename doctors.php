@@ -1,4 +1,5 @@
 <?PHP
+session_start();
 $pdo = require_once "database.php";
 $stmt = $pdo->prepare('SELECT * FROM doctors ORDER BY email ');
 $stmt->execute();
@@ -26,14 +27,25 @@ require_once "header.php";
                     <a href="#">Blood Bank</a>
                 </li>
                 <li>
-                    <a href="#">Appointment</a>
+                    <a href="<?php echo isset($_SESSION["userlogin"]) ? "appointment.php" : "login.php"; ?>">Appointment</a>
                 </li>
-                <li>
-                    <a href="login.php">Login</a>
-                </li>
-                <li>
-                    <a href="patientReg.php">SignIn</a>
-                </li>
+                <?php if (!isset($_SESSION["userlogin"])) : ?>
+                    <li>
+                        <a href="login.php">Login</a>
+                    </li>
+                    <li>
+                        <a href="patientReg.php">SignIn</a>
+                    </li>
+                <?php endif; ?>
+                <?php 
+                if (isset($_SESSION["userlogin"])) : ?>
+                    <li>
+                        <a href="logout.php">Logout</a>
+                    </li>
+                    <li>
+                        <a class="btn" href="userProfile.php"> <i class='fas fa-user-circle'></i> <?php echo  $_SESSION['name']; ?></a>
+                    </li>
+                <?php endif; ?>
 
             </ul>
         </div>
