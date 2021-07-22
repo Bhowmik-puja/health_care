@@ -78,7 +78,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <body>
     <div class="main">
         <div class="heading">
-            Register as Patient <br>
+            Register as Doctor<br>
             Create a account free
         </div>
 
@@ -150,7 +150,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </div>
 
 
-            <input type="submit" value="Submit" name="submit">
+            <input type="submit" value="Submit" name="submit"><br>
+            <span>Already Have an Account?</span><a href="doctorlogin.php">Login here</a>
 
         </form>
 
