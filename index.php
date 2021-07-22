@@ -30,12 +30,13 @@ session_start();
                         <a href="patientReg.php">SignIn</a>
                     </li>
                 <?php endif; ?>
-                <?php if (isset($_SESSION["userlogin"])) : ?>
+                <?php 
+                if (isset($_SESSION["userlogin"])) : ?>
                     <li>
                         <a href="logout.php">Logout</a>
                     </li>
                     <li>
-                        <h3><?php echo 'Welcome, ' . $_SESSION['name']; ?></h3>
+                        <a class="btn" href="userProfile.php"> <i class='fas fa-user-circle'></i> <?php echo  $_SESSION['name']; ?></a>
                     </li>
                 <?php endif; ?>
             </ul>
