@@ -85,12 +85,12 @@ if (!isset($_SESSION['id'])) {
                 </tr>
             </thead>
             <tbody>
-                <?php foreach ($appointments as $i=> $row) : ?>
+                <?php foreach ($appointments as $i => $row) : ?>
                     <tr>
-                        <th ><?PHP echo $i+1;?></th>
-                        <td><?php echo $row['doctorName']?></td>
-                        <td><?php echo $row['date']?></td>
-                        <td><?php echo $row['time']?></td>
+                        <th><?PHP echo $i + 1; ?></th>
+                        <td><?php echo $row['doctorName'] ?></td>
+                        <td><?php echo $row['date'] ?></td>
+                        <td><?php echo $row['time'] ?></td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>

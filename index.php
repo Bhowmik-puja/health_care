@@ -19,24 +19,34 @@ session_start();
                 <li>
                     <a href="">Blood Bank</a>
                 </li>
-                <li>
-                    <a href="<?php echo isset($_SESSION["userlogin"]) ? "appointment.php" : "login.php"; ?>">Appointment</a>
-                </li>
+                <?php
+                if (!isset($_SESSION['isDoctor'])) : ?>
+                    <li>
+                        <a href="<?php echo isset($_SESSION["userlogin"]) ? "appointment.php" : "patientlogin.php"; ?>">Appointment</a>
+                    </li>
+                <?php endif; ?>
                 <?php if (!isset($_SESSION["userlogin"])) : ?>
                     <li>
-                        <a href="login.php">Login</a>
+                        <a href="patientlogin.php">Login</a>
                     </li>
                     <li>
                         <a href="patientReg.php">SignIn</a>
                     </li>
+                    <li>
+                        <a href="adminlogin.php">ADMIN</a>
+                    </li>
                 <?php endif; ?>
-                <?php 
+                <?php
                 if (isset($_SESSION["userlogin"])) : ?>
                     <li>
                         <a href="logout.php">Logout</a>
                     </li>
                     <li>
-                        <a class="btn" href="userProfile.php"> <i class='fas fa-user-circle'></i> <?php echo  $_SESSION['name']; ?></a>
+                        <a class="btn" href="<?php
+                                                if ($_SESSION["userlogin"] == 1) echo "doctorProfile.php";
+                                                else if ($_SESSION["userlogin"] == 0) echo "patientProfile.php";
+                                                else echo "admin.php";
+                                                ?>"> <i class='fas fa-user-circle'></i> <?php echo  $_SESSION['name'] ?? "ADMIN"; ?></a>
                     </li>
                 <?php endif; ?>
             </ul>

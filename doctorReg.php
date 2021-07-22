@@ -29,13 +29,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo "<script>alert('This email is already exists!!!!');</script>";
     } else {
 
-        $stmt = $pdo->prepare("INSERT INTO doctors (namee,email,phone,gender,dob,specialist,degree,presentStatus,regNo,workplace,chamber,about,image,password ) 
-                                            VALUES (:fn,:ln,:email,:phone,:gender,:dob,:specialist,:deg,:status,:reg,:workplace,:chamber,:about,:image,:password)");
+        $stmt = $pdo->prepare("INSERT INTO doctors (name,email,phone,gender,dob,specialist,degree,presentStatus,regNo,workplace,chamber,about,image,password ) 
+                                            VALUES (:fn,:email,:phone,:gender,:dob,:specialist,:deg,:status,:reg,:workplace,:chamber,:about,:image,:password)");
         //   echo '<pre>';
         //   var_dump($stmt);
         //   echo '</pre>';
-        $stmt->bindValue(':fn', $fName);
-        $stmt->bindValue(':ln', $lName);
+        $stmt->bindValue(':fn', $name);
         $stmt->bindValue(':email', $email);
         $stmt->bindValue(':phone', $phone);
         $stmt->bindValue(':gender', $gender);

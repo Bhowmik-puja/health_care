@@ -111,7 +111,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </div>
             <input type="submit" value="submit" class="btn">
             <a href="doctorReg.php"> or Register As Doctor</a> <br>
-            <a href="donorReg.php"> or Register As Donor</a>
+            <a href="donorReg.php"> or Register As Donor</a><br>
+            <span>Already Have an Account?</span><a href="patientlogin.php">Login here</a>
         </form>
     </section>
 </body>

@@ -37,7 +37,7 @@ require_once "header.php";
                         <a href="patientReg.php">SignIn</a>
                     </li>
                 <?php endif; ?>
-                <?php 
+                <?php
                 if (isset($_SESSION["userlogin"])) : ?>
                     <li>
                         <a href="logout.php">Logout</a>

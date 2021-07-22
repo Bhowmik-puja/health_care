@@ -16,10 +16,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $time = $_POST['time'];
 
     // find doctor name from doctors table and insert it to appointment table 
-     $docStmt = $pdo->prepare('SELECT * FROM doctors where id = :docId');
-     $docStmt->bindValue(':docId',$doctorId);
-     $docStmt->execute();
-     $docName = $docStmt->fetchAll();
+    $docStmt = $pdo->prepare('SELECT * FROM doctors where id = :docId');
+    $docStmt->bindValue(':docId', $doctorId);
+    $docStmt->execute();
+    $docName = $docStmt->fetchAll();
     // fetch complete \\\
     $doctorName = $docName[0]['name'];
     $stmtIn = $pdo->prepare("INSERT INTO appointment (patientId,doctorId,doctorName,date,time, symptoms)
