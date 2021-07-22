@@ -1,55 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doner Registation Form</title>
-    <style>
-        *{
-            margin: 5px;
-            padding: 2px;
-        }
-    </style>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Doner Registation Form</title>
+     <style>
+          * {
+               margin: 5px;
+               padding: 2px;
+          }
+     </style>
 </head>
+
 <body>
-<div class="main">
-     <div class="heading">
-          Register as Donor<br>
-          Create a account free  
-     </div>
-
-     <form action="" method="post">
-          <div class="name_child">
-               <input type="text" name="doner_fast_name" placeholder="First Name" require>
-               <input type="text" name="doner_lasl_name" placeholder="Last Name" require>
+     <div class="main">
+          <div class="heading">
+               Register as Donor<br>
+               Create a account free
           </div>
 
-           <div class="email">
-               <input type="text" name="doner_email" placeholder="Email" require>
-               <input type="text" name="phone_number" placeholder="Phone Number" require>
-          </div>
+          <form action="" method="post">
+               <div class="name_child">
+                    <input type="text" name="doner_fast_name" placeholder="First Name">
+                    <input type="text" name="doner_lasl_name" placeholder="Last Name">
+               </div>
 
-          <div class="gender">
-                 <span>Gender</span><br>
-                 <input type="radio" name="gender"  value = "male"id="male">Male
-                 <input type="radio" name="gender" value="female" id="female">female
-                 <input type="radio" name="gender" value="other" id="other">other
-
-	           
-             	
-                <select  name="bloodgrp">
-                <option value="A+">Blood Group : A+</option>
-                <option value="O+">Blood Group : O+</option>
-                <option value="B+">Blood Group : B+</option>
-                <option value="AB+">Blood Group : AB+</option>
-                <option value="A-">Blood Group : A-</option>
-                <option value="O-">Blood Group : O-</option>
-                <option value="B-">Blood Group : B-</option>
-                <option value="AB-">Blood Group : AB-</option>
-                 </select>
-	             
-          </div>
+               <div class="email">
+                    <input type="text" name="doner_email" placeholder="Email">
+                    <input type="text" name="phone_number" placeholder="Phone Number">
+               </div>
 
           <div class="dof">
                <span>Date of Birth</span>
@@ -81,12 +62,18 @@
                <input type="password" name="confPassword" placeholder="Conform Password" require>  
           </div>
 
+               <div class="doner_password">
+                    <input type="password" name="password" placeholder="New password">
+                    <input type="password" name="confPassword" placeholder="Conform Password">
+               </div>
 
-         
-         <input type="submit" value="Submit">
 
-     </form>
-         
-    </div>
+
+               <input type="submit" value="Submit">
+
+          </form>
+
+     </div>
 </body>
+
 </html>
