@@ -84,7 +84,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         <form action="" onsubmit="return checkInputs()" method="post" autocomplete="on">
             <div class="name_child">
-                <input type="text" name="fname" placeholder="Name" required>
+                <input type="text" name="fname" placeholder="Full Name" required>
             </div>
 
             <div class="email">
