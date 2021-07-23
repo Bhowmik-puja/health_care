@@ -30,11 +30,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     } else {
 
         $stmt = $pdo->prepare("INSERT INTO doctors (name,email,phone,gender,dob,specialist,degree,presentStatus,regNo,workplace,chamber,about,image,password ) 
-                                            VALUES (:fn,:email,:phone,:gender,:dob,:specialist,:deg,:status,:reg,:workplace,:chamber,:about,:image,:password)");
+                                            VALUES (:name,:email,:phone,:gender,:dob,:specialist,:deg,:status,:reg,:workplace,:chamber,:about,:image,:password)");
         //   echo '<pre>';
         //   var_dump($stmt);
         //   echo '</pre>';
-        $stmt->bindValue(':fn', $name);
+        $stmt->bindValue(':name', $name);
         $stmt->bindValue(':email', $email);
         $stmt->bindValue(':phone', $phone);
         $stmt->bindValue(':gender', $gender);
@@ -49,8 +49,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $stmt->bindValue(':image', '');
         $stmt->bindValue(':password', $password);
         $stmt->execute();
-        echo "<script>alert('This Email already exist!!!')</script>";
-        header('location:login.php');
+        // echo "<script>alert('This Email already exist!!!')</script>";
+        header('location:doctorlogin.php');
     }
 }
 

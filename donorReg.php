@@ -25,7 +25,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
           echo "<script>alert('This email is already exists!!!!');</script>";
      } else {
           $stmt = $pdo->prepare("INSERT INTO donors (name,email,phone,gender,bloodGrp,dob,lastDonate,presentAdd,permanentAdd,password ) 
-     VALUES (:name,:email,:phone,:gender,:lastdonate,:dob,:presentAdd,:parmanentAdd,:password)");
+     VALUES (:name,:email,:phone,:gender,:bg,:lastdonate,:dob,:presentAdd,:parmanentAdd,:password)");
+          $stmt->bindValue(':name', $name);
+          $stmt->bindValue(':email', $email);
+          $stmt->bindValue(':phone', $phone);
+          $stmt->bindValue(':gender', $gender);
+          $stmt->bindValue(':bg', $bg);
+          $stmt->bindValue(':dob', $dob);
+          $stmt->bindValue(':lastdonate', $lastdonate);
+          $stmt->bindValue(':presentAdd', $address1);
+          $stmt->bindValue(':parmanentAdd', $address2);
+          $stmt->bindValue('password', $password);
+          $stmt->execute(header("location: index.php"));
+         
      }
 }
 
@@ -95,12 +107,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <textarea type="text" name="address1" placeholder="Present Address" required></textarea>
                     <textarea type="text" name="address2" placeholder="Permanent Address"></textarea>
                </div>
-
-
-
                <div class="doner_password">
-                    <input type="password" name="password" placeholder="New password" required>
-                    <input type="password" name="cPassword" placeholder="Conform Password" required>
+                    <input type="password" name="password" placeholder="New password" id="password" required>
+                    <input type="password" name="cPassword" placeholder="Confirm Password" id="cpassword" required>
                </div>
 
                <input type="submit" value="Submit" name="submit">
