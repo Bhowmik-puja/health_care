@@ -8,7 +8,7 @@
                     <a href="index.php">Home</a>
                 </li>
                 <li>
-                    <a href="">About</a>
+                    <a href="about.php">About</a>
                 </li>
                 <?php if (!isset($_SESSION["userlogin"])) : ?>
                     <li>
