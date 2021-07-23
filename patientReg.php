@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $stmt->bindValue(':district', $district);
         $stmt->bindValue(':image', ' ');
         $stmt->bindValue(':password', $password);
-        $stmt->execute(header('location:login.php'));
+        $stmt->execute(header('location:patientlogin.php'));
     }
 }
 ?>
@@ -120,8 +120,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
           </div>
 
           <div class="two-field">
-               <input type="password" name="password" placeholder="New password" require>
-               <input type="password" name="cpassword" placeholder="Confirm Password" require>  
+               <input type="password" name="password" placeholder="New password" id="password" require>
+               <input type="password" name="cpassword" placeholder="Confirm Password" id="cpassword" require>  
           </div>
 
         
