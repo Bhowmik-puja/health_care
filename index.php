@@ -102,6 +102,7 @@ session_start();
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore mollitia obcaecati et tenetur veritatis laudantium sint error tempore ab possimus harum, nemo placeat molestias nostrum sunt odit blanditiis doloremque odio?</p>
             </div>
         </div>
+
     </section>
 
 </body>
@@ -109,5 +110,6 @@ session_start();
 
 </footer>
 </body>
+
 
 </html>
