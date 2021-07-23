@@ -57,64 +57,88 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/regForm.css">
     <script type="text/javascript" src="validation.js"></script>
+    <link rel="stylesheet" href="css/patientReg.css">
     <title>Registration Form</title>
 </head>
 
+
 <body>
-    <section class="main">
+    <div class="container">
         <form action="" onsubmit="return checkInputs()" method="post" autocomplete="on">
-            <h1>Register as Patient</h1>
-            <p>Please fill in the form to create an account</p>
-            <hr>
-            <label for="fname"></label>
-            <input type="text" placeholder="First Name" name="firstName" required>
-            <input type="text" placeholder="Last Name" name="lastName" required><br>
-            <input type="email" placeholder="Email" name="email" required><br>
-            <input type="tel" placeholder="Phone" name="phone" required>
-            <input type="text" placeholder="telephone" name="telephone"><br>
-            <span>Gender</span>
-            <input type="radio" name="gender" value="male">Male
-            <input type="radio" name="gender" value="female">female
-            <input type="radio" name="gender" value="other" checked>other
-            <br>
-            <span>Blood Group</span>
-            <select name="bloodgrp">
-                <option value="A+">A+</option>
-                <option value="O+">O+</option>
-                <option value="B+">B+</option>
-                <option value="AB+">AB+</option>
-                <option value="A-">A-</option>
-                <option value="O-">O-</option>
-                <option value="B-">B-</option>
-                <option value="AB-">AB-</option>
-            </select>
-            <br>
-            <span>Date of Birth</span>
-            <input type="date" name="dob" required>
-            <br>
-            <textarea type="text" placeholder="address" name="address" required></textarea>
-            <input type="text" placeholder="city" name="city" required>
-            <input type="text" placeholder="district" name="district" required>
-            <br>
-            <label>Add an Image:</label>
-            <input type="file" name="image">
-            <br>
-            <div class="form-control">
-                <label for="">Password</label>
-                <input type="password" name="password" id="password" required>
+
+            <div class="heading">
+                 <h2>Register as Doctor</h2> 
+                  Create a account free  
+            </div>
+            
+            <div class="single-input">
+                <input type="text" name="fname" placeholder="Full Name" required>
+            </div>
+
+            <div class="email">
+                <input style="margin-left: 26px;" type="email" name="email" placeholder="Email" required>
+                <input type="text" name="phone" placeholder="Phone Number" required>
+            </div>
+
+            <div class="gender">
+                <span>Gender</span>
+                <input type="radio" name="gender" value="male" id="male" required>Male
+                <input type="radio" name="gender" value="female" id="female" required>female
+                <input type="radio" name="gender" value="other" id="other" required>other
+            </div>
+
+            <div class="dob">
+                <span>Date of Birth :</span>
+                <input type="date" name="dob" required>
+            </div>
+
+            <div class="single-input">
+                <input type="text" name="specialist" placeholder="Specialist" required>
+            </div>
+
+            <div class="single-input">
+                <input type="text" name="degree" placeholder="degree" required>
+            </div>
+
+            <div class="single-input">
+                <input type="text" name="status" placeholder="Present Status" required>
+            </div>
+
+            <div class="single-input">
+                <input type="text" name="regNo" placeholder="BMDC Registration No" required>
+            </div>
+
+            <div class="single-input">
+                <input type="text" name="workplace" placeholder="Present Work Place" required>
+            </div>
+
+            <div class="single-input">
+                <input type="text" name="chamber" placeholder="Place to see Patient" required>
+            </div>
+
+            <div class="about">
+                <textarea rows="6" cols="53" name="about" placeholder="Say Saysomething about You" required></textarea>
+            </div>
+
+            <div class="image_upload">
+                <label for="img">Select image:</label>
+                <input type="file" name="image" id="doctor_img">
+            </div>
+            <div class="single-input">
+                <input type="password" name="password" id="password" placeholder="New password" required>
                 <small id="error"></small>
             </div>
-            <div class="form-control">
-                <label for="">Confirm Password</label>
-                <input type="password" name="cpassword" id="cpassword" required>
+            <div class="single-input">
+                <input type="password" name="cpassword" id="cpassword" placeholder="Confirm Password" required>
                 <small id="error2"></small>
             </div>
-            <input type="submit" value="submit" class="btn">
-            <a href="doctorReg.php"> or Register As Doctor</a> <br>
-            <a href="donorReg.php"> or Register As Donor</a><br>
-            <span>Already Have an Account?</span><a href="patientlogin.php">Login here</a>
+
+
+            <input class="btn_submit" type="submit" value="Submit" name="submit">
+
         </form>
-    </section>
+
+    </div>
 </body>
 
 </html>
