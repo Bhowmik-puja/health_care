@@ -8,76 +8,66 @@ $doctors = $stmt->fetchAll(PDO::FETCH_ASSOC);
 // var_dump($doctors);
 // echo '</pre>';
 ?>
-<?php
-require_once "header.php";
-?>
-<div>
-    <nav>
-        <a href="index.php"><span class="website-name">Health Care</span></a>
+<!DOCTYPE html>
+<html lang="en">
 
-        <div class="navbar">
-            <ul>
-                <li>
-                    <a href="index.php">Home</a>
-                </li>
-                <li>
-                    <a href="doctors.php">Doctors</a>
-                </li>
-                <li>
-                    <a href="#">Blood Bank</a>
-                </li>
-                <li>
-                    <a href="<?php echo isset($_SESSION["userlogin"]) ? "appointment.php" : "login.php"; ?>">Appointment</a>
-                </li>
-                <?php if (!isset($_SESSION["userlogin"])) : ?>
-                    <li>
-                        <a href="login.php">Login</a>
-                    </li>
-                    <li>
-                        <a href="patientReg.php">SignIn</a>
-                    </li>
-                <?php endif; ?>
-                <?php
-                if (isset($_SESSION["userlogin"])) : ?>
-                    <li>
-                        <a href="logout.php">Logout</a>
-                    </li>
-                    <li>
-                        <a class="btn" href="userProfile.php"> <i class='fas fa-user-circle'></i> <?php echo  $_SESSION['name']; ?></a>
-                    </li>
-                <?php endif; ?>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 
-            </ul>
-        </div>
-    </nav>
-</div>
-<div style="text-align: center; font-size: 30px; margin-top:30px; margin-bottom:0;">
-    <h>Available Doctors:</h>
-</div>
-<hr>
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script><!-- for blood icon -->
 
-<div class="container">
+    <style>
+        body {
+            background-image: url(images/bg.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+    </style>
+    <title>Health Care</title>
+</head>
 
-    <?php foreach ($doctors as $doctor) : ?>
-        <div class="doctor-block">
-            <div class="block">
-                <img src="images/dummy.jpg" alt="">
-            </div>
-            <div class="block details">
-                <h3><?php echo $doctor['name']; ?></h3>
-                <h4>Email:<?php echo ' ' . $doctor['email']; ?></h4>
-                <h4>Phone:<?php echo ' ' . $doctor['phone']; ?></h4>
-                <h4><?php echo ' ' . $doctor['specialist']; ?></h4>
-                <h4><?php echo ' ' . $doctor['degree']; ?></h4>
-                <h4><?php echo ' ' . $doctor['chamber']; ?></h4>
-                <h4><?php echo ' ' . $doctor['presentStatus']; ?></h4>
-                <br>
-                <br>
-                <a href="">Book Appointment</a>
-            </div>
+<body>
+
+    <?php include_once "navbar.php"; ?>
+
+    <div style="text-align: center; font-size: 30px; margin-top:30px; margin-bottom:0;">
+        <h>Available Doctors:</h>
+    </div>
+    <hr>
+    <section>
+        <div class="doc-container">
+
+            <?php foreach ($doctors as $doctor) : ?>
+                <div class="doctor-block">
+                    <div class="block">
+                        <img src="images/dummy.jpg" alt="">
+                    </div>
+                    <div class="block details">
+                        <h3><?php echo $doctor['name']; ?></h3>
+                        <h4>Email:<?php echo ' ' . $doctor['email']; ?></h4>
+                        <h4>Phone:<?php echo ' ' . $doctor['phone']; ?></h4>
+                        <h4><?php echo ' ' . $doctor['specialist']; ?></h4>
+                        <h4><?php echo ' ' . $doctor['degree']; ?></h4>
+                        <h4><?php echo ' ' . $doctor['chamber']; ?></h4>
+                        <h4><?php echo ' ' . $doctor['presentStatus']; ?></h4>
+                        <br>
+                        <br>
+                        <a href="">Book Appointment</a>
+                    </div>
+
+                </div>
+            <?php endforeach; ?>
 
         </div>
-    <?php endforeach; ?>
+    </section>
 
-</div>
-<?php require_once "footer.php"; ?>
+</body>
+
+</html>
