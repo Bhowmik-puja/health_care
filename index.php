@@ -84,6 +84,16 @@ session_start();
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore mollitia obcaecati et tenetur veritatis laudantium sint error tempore ab possimus harum, nemo placeat molestias nostrum sunt odit blanditiis doloremque odio?</p>
         </div>
     </div>
+
+    <div class="box-1">
+        <div>
+            <img src="images/dummy.jpg" alt="">
+        </div>
+        <div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore mollitia obcaecati et tenetur veritatis laudantium sint error tempore ab possimus harum, nemo placeat molestias nostrum sunt odit blanditiis doloremque odio?</p>
+        </div>
+    </div>
+    
 </section>
 <section class="blogs">
 
