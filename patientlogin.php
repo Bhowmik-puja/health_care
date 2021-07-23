@@ -1,6 +1,7 @@
 <?php
 session_start();
 $pdo = require_once "database.php";
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = $_POST['email'];
     $pass = ($_POST['password']);
@@ -14,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // echo '</pre>';
 
     if ($stmt->rowCount() > 0) {
-        $_SESSION['userlogin'] = $_POST['email'];
+        $_SESSION['userlogin'] = 0;
         $_SESSION['name'] = $profiles[0]['firstName'];
         $_SESSION['id'] = $profiles[0]['id'];
         // var_dump($_SESSION['id']);
@@ -42,13 +43,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <body>
     <div id="login">
-        <h3 class="text-center text-white pt-5">Login form</h3>
         <div class="container">
             <div id="login-row" class="row justify-content-center align-items-center">
                 <div id="login-column" class="col-md-6">
                     <div id="login-box" class="col-md-12">
                         <form id="login-form" class="form" action="" method="post">
-                            <h3 class="text-center text-info">Login</h3>
+                            <h3 class="text-center text-info">Login (Patient)</h3>
                             <div class="form-group">
                                 <label for="username" class="text-info">Email:</label><br>
                                 <input type="email" name="email" id="email" class="form-control" required>
@@ -59,7 +59,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                             </div>
                             <div class="form-group">
                                 <br>
-                                <input type="submit" name="submit" class="btn btn-info btn-md" value="submit">
+                                <input type="submit" name="submit" class="btn btn-info btn-md" value="submit"><br>
+                                <span>Are you a doctor?</span><a href="doctorlogin.php">click here</a>
                             </div>
                             <div id="register-link" class="text-right">
                                 <span>Don't have an account?</span>

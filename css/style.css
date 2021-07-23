@@ -70,6 +70,14 @@ nav ul li{
 footer{
     height: 300px;
 }
+.btn {
+    background-color: RoyalBlue;
+    border: none;
+    color: white;
+    padding: 12px 16px;
+    font-size: 16px;
+    border-radius: 5px;
+  }
 
  /* doctor page css */
 .block{
