@@ -31,7 +31,7 @@ session_start();
             <div class="box">
                 <div class="icon"><i class='far fa-calendar-alt' style='font-size:36px; text-align:center;'></i></div>
                 <div class="content">
-                    <h3>BOOK  A   APPOINTMENT</h3>
+                    <h3>BOOK  AN   APPOINTMENT</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore quas distinctio illo voluptatibus ipsa praesentium et eius obcaecati a error. Fugit expedita iure blanditiisvoluptatum! Error, impedit.</p>
                     <button class="click-btn"><a href="appointment.php">Click here</a></button>
 

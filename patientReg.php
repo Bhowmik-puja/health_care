@@ -46,6 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $stmt->bindValue(':password', $password);
         $stmt->execute(header('location:patientlogin.php'));
     }
+    // 
 }
 ?>
 <!DOCTYPE html>
@@ -55,90 +56,103 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/regForm.css">
     <script type="text/javascript" src="validation.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/patientReg.css">
     <title>Registration Form</title>
 </head>
 
 
 <body>
-<div class="container">
-    
-     <form action="" onsubmit="return checkInputs()" method="post" autocomplete="on">
+    <div class="container">
 
-         <div class="heading">
-         <h2>Register as Patient</h2> 
-          Create a account free  
-         </div>
-         
-          <div class="two-field">
-               <input id="fname" type="text" name="firstName" placeholder="First Name" require>
-               <input type="text" name="lastName"  placeholder="Last Name" require>
-          </div>
+        <form action="" onsubmit="return checkInputs()" method="post" autocomplete="on">
 
-           <div class="email">
-               <input type="text" name="email" placeholder="Email" require>
-          </div>
-
-          <div class="two-field">
-                <input type="text" name="phone" placeholder="Phone ">
-                <input type="text" name="telephone" placeholder="Telephone">
-          </div>
-
-          <div class="gender">
-                 <input type="radio" name="gender"  value = "male"id="male">Male
-                 <input type="radio" name="gender" value="female" id="female">female
-                 <input type="radio" name="gender" value="other" id="other">other
-              
-                <select  name="bloodgrp" class="blood_group">
-                <option value="A+">Blood Group :&ensp; A+</option>
-                <option value="O+">Blood Group :&ensp; O+</option>
-                <option value="B+">Blood Group :&ensp; B+</option>
-                <option value="AB+">Blood Group :&ensp; AB+</option>
-                <option value="A-">Blood Group :&ensp; A-</option>
-                <option value="O-">Blood Group :&ensp; O-</option>
-                <option value="B-">Blood Group :&ensp; B-</option>
-                <option value="AB-">Blood Group :&ensp; AB-</option>
-                </select>
-                 
-          </div>
-
-          <div class="dob">
-               <span class="child_dob">Date of Birth</span>
-               <input class="date_input" type="date" name="dob" required>
-          </div>
-
-
-           <div class="address">
-                <textarea rows="4" cols="66" name="address" placeholder="Enter your Address"></textarea>
+            <div class="heading">
+                <h2>Register as Patient</h2>
+                Create a account free
             </div>
 
-           <div class="two-field">
-               <input type="text" name="city" placeholder="City/village" require>
-               <input type="text" name="district" placeholder="District" require>  
-          </div>
+            <div class="two-field">
+                <input id="fname" type="text" name="firstName" placeholder="First Name" require>
+                <input type="text" name="lastName" placeholder="Last Name" require>
+            </div>
 
-          <div class="two-field">
-               <input type="password" name="password" placeholder="New password" id="password" require>
-               <input type="password" name="cpassword" placeholder="Confirm Password" id="cpassword" require>  
-          </div>
+            <div class="email">
+                <input type="text" name="email" placeholder="Email" require>
+            </div>
 
-        
-            <input class="btn_submit" type="submit" value="Submit"> 
-           
-          <hr class="horiz">
-         
+            <div class="two-field">
+                <input type="text" name="phone" placeholder="Phone ">
+                <input type="text" name="telephone" placeholder="Telephone">
+            </div>
 
-         <div class="link_field">
-              <a href="doctorReg.php"> or Register As Doctor</a><br>
-              <a href="donorReg.php"> or Register As Donor.</a>
-              <p>Already Have an Account?<a id="last-link" href="patientlogin.php">Login here</a></p>
-        </div>  
+            <div class="gender">
+                <input type="radio" name="gender" value="male" id="male">Male
+                <input type="radio" name="gender" value="female" id="female">female
+                <input type="radio" name="gender" value="other" id="other">other
 
-        
-     </form>
-         
+                <select name="bloodgrp" class="blood_group">
+                    <option value="A+">Blood Group :&ensp; A+</option>
+                    <option value="O+">Blood Group :&ensp; O+</option>
+                    <option value="B+">Blood Group :&ensp; B+</option>
+                    <option value="AB+">Blood Group :&ensp; AB+</option>
+                    <option value="A-">Blood Group :&ensp; A-</option>
+                    <option value="O-">Blood Group :&ensp; O-</option>
+                    <option value="B-">Blood Group :&ensp; B-</option>
+                    <option value="AB-">Blood Group :&ensp; AB-</option>
+                </select>
+
+            </div>
+
+            <div class="dob">
+                <span class="child_dob">Date of Birth</span>
+                <input class="date_input" type="date" name="dob" required>
+            </div>
+
+
+            <div class="email">
+                <input rows="4" cols="66" name="address" placeholder="Enter your Address">
+            </div>
+
+            <div class="two-field">
+                <input type="text" name="city" placeholder="City/village" require>
+                <input type="text" name="district" placeholder="District" require>
+            </div>
+
+            <div class="two-field">
+                <span style="font-size: 20px;" class="child_dob">Enter password:&nbsp;&nbsp;&nbsp;</span>
+                <input type="password" name="password" id="password" required>
+                <small id="error"></small>
+            </div>
+            <div class="two-field">
+                <span style="font-size: 20px;">Retype Password:</span>
+                <input type="password" name="cpassword" id="cpassword" required>
+                <small id="error2"></small>
+            </div>
+            <div class="btn">
+                <input class="btn_submit" type="submit" value="Submit">
+                
+            </div>
+
+
+            <hr class="horiz">
+
+            
+            <div class="link_field">
+                <a href="doctorReg.php"> or Register As Doctor<span>||</span></a>
+                
+                <a href="donorReg.php"> or Register As Donor.</a>
+            </div>
+            <div style="font-size: 20px;">
+                <p>Already Have an Account?<a id="last-link" href="patientlogin.php">Login here</a></p>
+            </div>
+
+
+        </form>
+
     </div>
 </body>
 
