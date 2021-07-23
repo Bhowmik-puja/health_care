@@ -63,81 +63,82 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
 <body>
-    <div class="container">
-        <form action="" onsubmit="return checkInputs()" method="post" autocomplete="on">
+<div class="container">
+    
+     <form action="" onsubmit="return checkInputs()" method="post" autocomplete="on">
 
-            <div class="heading">
-                 <h2>Register as Doctor</h2> 
-                  Create a account free  
-            </div>
-            
-            <div class="single-input">
-                <input type="text" name="fname" placeholder="Full Name" required>
-            </div>
+         <div class="heading">
+         <h2>Register as Patient</h2> 
+          Create a account free  
+         </div>
+         
+          <div class="two-field">
+               <input id="fname" type="text" name="firstName" placeholder="First Name" require>
+               <input type="text" name="lastName"  placeholder="Last Name" require>
+          </div>
 
-            <div class="email">
-                <input style="margin-left: 26px;" type="email" name="email" placeholder="Email" required>
-                <input type="text" name="phone" placeholder="Phone Number" required>
-            </div>
+           <div class="email">
+               <input type="text" name="email" placeholder="Email" require>
+          </div>
 
-            <div class="gender">
-                <span>Gender</span>
-                <input type="radio" name="gender" value="male" id="male" required>Male
-                <input type="radio" name="gender" value="female" id="female" required>female
-                <input type="radio" name="gender" value="other" id="other" required>other
-            </div>
+          <div class="two-field">
+                <input type="text" name="phone" placeholder="Phone ">
+                <input type="text" name="telephone" placeholder="Telephone">
+          </div>
 
-            <div class="dob">
-                <span>Date of Birth :</span>
-                <input type="date" name="dob" required>
-            </div>
+          <div class="gender">
+                 <input type="radio" name="gender"  value = "male"id="male">Male
+                 <input type="radio" name="gender" value="female" id="female">female
+                 <input type="radio" name="gender" value="other" id="other">other
+              
+                <select  name="bloodgrp" class="blood_group">
+                <option value="A+">Blood Group :&ensp; A+</option>
+                <option value="O+">Blood Group :&ensp; O+</option>
+                <option value="B+">Blood Group :&ensp; B+</option>
+                <option value="AB+">Blood Group :&ensp; AB+</option>
+                <option value="A-">Blood Group :&ensp; A-</option>
+                <option value="O-">Blood Group :&ensp; O-</option>
+                <option value="B-">Blood Group :&ensp; B-</option>
+                <option value="AB-">Blood Group :&ensp; AB-</option>
+                </select>
+                 
+          </div>
 
-            <div class="single-input">
-                <input type="text" name="specialist" placeholder="Specialist" required>
-            </div>
+          <div class="dob">
+               <span class="child_dob">Date of Birth</span>
+               <input class="date_input" type="date" name="dob" required>
+          </div>
 
-            <div class="single-input">
-                <input type="text" name="degree" placeholder="degree" required>
-            </div>
 
-            <div class="single-input">
-                <input type="text" name="status" placeholder="Present Status" required>
-            </div>
-
-            <div class="single-input">
-                <input type="text" name="regNo" placeholder="BMDC Registration No" required>
-            </div>
-
-            <div class="single-input">
-                <input type="text" name="workplace" placeholder="Present Work Place" required>
-            </div>
-
-            <div class="single-input">
-                <input type="text" name="chamber" placeholder="Place to see Patient" required>
+           <div class="address">
+                <textarea rows="4" cols="66" name="address" placeholder="Enter your Address"></textarea>
             </div>
 
-            <div class="about">
-                <textarea rows="6" cols="53" name="about" placeholder="Say Saysomething about You" required></textarea>
-            </div>
+           <div class="two-field">
+               <input type="text" name="city" placeholder="City/village" require>
+               <input type="text" name="district" placeholder="District" require>  
+          </div>
 
-            <div class="image_upload">
-                <label for="img">Select image:</label>
-                <input type="file" name="image" id="doctor_img">
-            </div>
-            <div class="single-input">
-                <input type="password" name="password" id="password" placeholder="New password" required>
-                <small id="error"></small>
-            </div>
-            <div class="single-input">
-                <input type="password" name="cpassword" id="cpassword" placeholder="Confirm Password" required>
-                <small id="error2"></small>
-            </div>
+          <div class="two-field">
+               <input type="password" name="password" placeholder="New password" require>
+               <input type="password" name="cpassword" placeholder="Confirm Password" require>  
+          </div>
 
+        
+            <input class="btn_submit" type="submit" value="Submit"> 
+           
+          <hr class="horiz">
+         
 
-            <input class="btn_submit" type="submit" value="Submit" name="submit">
+         <div class="link_field">
+              <a href="doctorReg.php"> or Register As Doctor</a><br>
+              <a href="donorReg.php"> or Register As Donor.</a>
+              <p>Already Have an Account?<a id="last-link" href="patientlogin.php">Login here</a></p>
+        </div>  
 
-        </form>
-
+        
+     </form>
+         
     </div>
 </body>
 
