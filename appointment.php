@@ -33,6 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $stmtIn->bindValue(':time', $time);
     $stmtIn->execute();
     echo "<script> alert('appointment Booked');</script>";
+    header("location: index.php");
 }
 ?>
 

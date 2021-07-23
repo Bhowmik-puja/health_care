@@ -33,7 +33,7 @@ session_start();
                 <div class="content">
                     <h3>BOOK  AN   APPOINTMENT</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore quas distinctio illo voluptatibus ipsa praesentium et eius obcaecati a error. Fugit expedita iure blanditiisvoluptatum! Error, impedit.</p>
-                    <button class="click-btn"><a href="appointment.php">Click here</a></button>
+                    <button class="click-btn"><a href="<?php echo isset($_SESSION['id'] ) ? "appointment.php":"patientlogin.php"; ?>">Click here</a></button>
 
                 </div>
             </div>

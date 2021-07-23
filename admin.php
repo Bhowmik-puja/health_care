@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (!isset($_SESSION['userlogin'])) {
+if (!isset($_SESSION['userlogin']) && $_SESSION['userlogin'] !=2) {
     echo "Access Denied";
     exit();
 } else {
@@ -38,7 +38,8 @@ if (!isset($_SESSION['userlogin'])) {
 </head>
 
 <body>
-    <h1>Admin Dashboard</h1>
+
+    <h1><a href="index.php" style="text-decoration:none; padding-right:5px; color:brown">|Health Care|</a>Admin Dashboard</h1>
     <hr>
     <div>
         <h3 style="text-align: center;">All Registered Doctors:</h3>
