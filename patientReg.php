@@ -144,7 +144,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <div class="link_field">
                 <a href="doctorReg.php"> or Register As Doctor<span>||</span></a>
                 
-                <a href="donorReg.php"> or Register As Donor.</a>
+
             </div>
             <div style="font-size: 20px;">
                 <p>Already Have an Account?<a id="last-link" href="patientlogin.php">Login here</a></p>
