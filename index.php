@@ -53,7 +53,7 @@ session_start();
                 <div class="content">
                     <h3>BLOOD BANK</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore quas distinctio illo voluptatibus ipsa praesentium et eius obcaecati a error. Fugit expedita iure blanditiisvoluptatum! Error, impedit. </p>
-                    <button class="click-btn"><a href="">Click here</a></button>
+                    <button class="click-btn"><a href="bloodbank.php">Click here</a></button>
                 </div>
             </div>
         </div>
