@@ -64,13 +64,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <style>
-        * {
-            margin: 5px;
-            padding: 2px;
-        }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/doctorReg.css">
     <script type="text/javascript" src="validation.js"></script>
     <title>Doctor Registation Form</title>
 </head>
@@ -79,7 +76,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <div class="main">
         <div class="heading">
             Register as Doctor<br>
-            Create a account free
         </div>
 
         <form action="" onsubmit="return checkInputs()" method="post" autocomplete="on">
@@ -88,23 +84,23 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </div>
 
             <div class="email">
-                <input type="email" name="email" placeholder="Email" required>
+                <input type="email" name="email" placeholder="Email" required> 
                 <input type="text" name="phone" placeholder="Phone Number" required>
-            </div>
+            </div> 
+           
+
 
             <div class="gender">
-                <span>Gender</span>
+                <label>Gender: </label>
                 <input type="radio" name="gender" value="male" id="male" required>Male
                 <input type="radio" name="gender" value="female" id="female" required>female
                 <input type="radio" name="gender" value="other" id="other" required>other
+
+                <span>Date of Birth</span>
+                <input type="date" id="d" name="date"  required>
             </div>
 
-            <div class="dob">
-                <span>Date of Birth</span>
-                <input type="number" id="d" name="date" min="1" max="31" placeholder="day" required>
-                <input type="number" id="m" name="date" min="1" max="12" placeholder="month" required>
-                <input type="number" id="y" name="date" min="1900" max="9999" placeholder="year" required>
-            </div>
+            
 
             <div class="specialist">
                 <input type="text" name="specialist" placeholder="Specialist" required>
@@ -131,19 +127,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </div>
 
             <div class="about">
-                <textarea placeholder="Say something about you" rows="4" cols="50" name="about" required> </textarea>
+                <textarea placeholder="Say something about you" rows="4"  name="about" required></textarea>
             </div>
 
             <div class="image_upload">
                 <label for="img">Select image:</label>
                 <input type="file" name="image" id="doctor_img">
             </div>
-            <div class="form-control">
+            <div class="password">
                 <label for="">Password</label>
                 <input type="password" name="password" id="password" required>
                 <small id="error"></small>
             </div>
-            <div class="form-control">
+            <div class="confirmpass">
                 <label for="">Confirm Password</label>
                 <input type="password" name="cpassword" id="cpassword" required>
                 <small id="error2"></small>
@@ -151,7 +147,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
             <input type="submit" value="Submit" name="submit"><br>
-            <span>Already Have an Account?</span><a href="doctorlogin.php">Login here</a>
+            <div class="last-line">
+                <span >Already Have an Account? <a href="doctorLogin.php">login here</a></span>
+            </div>
+            
 
         </form>
 
