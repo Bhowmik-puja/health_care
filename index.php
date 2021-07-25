@@ -15,7 +15,7 @@ session_start();
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-
+    <link rel="stylesheet" href="css/meetDoctor.css">
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script><!-- for blood icon -->
     <title>Health Care</title>
 </head>
@@ -62,46 +62,40 @@ session_start();
 
 
     <section class="doctors">
-        <h1>Doctors</h1>
-        <br>
+        <h1>Meet Our Doctors</h1>
+        <hr style="border: 1px solid black">
+        <div class="row">
+           <div class="box-1">
+               <img src="images/sobuz.png" alt="">
+               <h3>Dr. Md. Rabiul Islam</h3><br>
+               <p>Medicine, Diabetes and Arthritis<br> General Physician, <br> MBBS (RMC), BCS (Health) <br>FCPS-part-2 (medicine), CMU(Ultra) <br>Medical officer<br> Upazila Health Complex, Sariakandi,Bogura <br>
+                Ex.Registrar(Medicine) <br>Dhaka Central Int. Medical College & Hospital
+               </p>
+           </div>
 
-        <div class="box-1">
-            <div>
-                <img src="images/dummy.jpg" alt="">
-            </div>
-            <div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore mollitia obcaecati et tenetur veritatis laudantium sint error tempore ab possimus harum, nemo placeat molestias nostrum sunt odit blanditiis doloremque odio?</p>
-            </div>
-        </div>
+         <div class="box-1">
+              <img src="images/ashik.png" alt="">
+              <h3>Dr. Md. Ashikur Rhaman</h3> <br>
+               <p>Surgery and General Physician<br>MBBS, (COMC),<br>BCS (Health) FCPS Surgery Final part <br> Resident Medical Officer <br>
+                Medical officer<br> Upazila Health Complex, Sariakandi,Bogura <br>
+               </p>
+           </div>
 
-        <div class="box-1">
-            <div>
-                <img src="images/dummy.jpg" alt="">
-            </div>
-            <div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore mollitia obcaecati et tenetur veritatis laudantium sint error tempore ab possimus harum, nemo placeat molestias nostrum sunt odit blanditiis doloremque odio?</p>
-            </div>
-        </div>
+          <div class="box-1">
+              <img src="images/dshofiq.png" alt="">
+               <h3>Dr. Md. Shoriqul Islam</h3><br>
+               <p>General Physician<br> MBBS (SZMC), BCS (Health) DMU<br>Medical officer<br>Mugda Medical College & Hospital<br>
+                 
+               </p>
+           </div>
 
-        <div class="box-1">
-            <div>
-                <img src="images/dummy.jpg" alt="">
-            </div>
-            <div>
-
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero numquam veritatis quo et cum. Dignissimos expedita, odio blanditiis reiciendis maiores commodi iusto nam obhjohuaperiam. Exhvhvhpedita, quam possimus.</p>
-
-            </div>
-        </div>
-
-        <div class="box-1">
-            <div>
-                <img src="images/dummy.jpg" alt="">
-            </div>
-            <div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore mollitia obcaecati et tenetur veritatis laudantium sint error tempore ab possimus harum, nemo placeat molestias nostrum sunt odit blanditiis doloremque odio?</p>
-            </div>
-        </div>
+          <div class="box-1">
+               <img src="images/dTanjil.png" alt="">
+               <h3>Dr. Md. Tanjil Ahamed</h3><br>
+               <p> MBBS (RMC), Assistant Surgeon<br> BCS (Health) CMU(Dhaka) <br>Medical officer<br> Upazila Health Complex, Sariakandi,Bogura <br>
+               </p>
+           </div>
+       </div>
 
     </section>
 
