@@ -85,30 +85,7 @@ nav ul li {
     padding: 30px 15px 8px 10px;
     position: relative;
 }
-
-.doctors {
-    width: 80%;
-    margin: auto;
-    height: 700px;
-    padding-top: 30px;
-}
-
-.doctors img {
-    width: 200px;
-    padding: 10px;
-}
-
-.box-1 {
-    overflow: hidden;
-    float: left;
-    width: 20%;
-    padding: 25px;
-    box-shadow: 3px 3px 5px 6px #ccc;
-    margin: 15px;
-    box-sizing: border-box;
-    background-color: white;
-
-}
+/*  doctor    */
 
 .blogs {
     height: 500px;
