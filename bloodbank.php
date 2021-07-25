@@ -129,7 +129,11 @@
                     <th>name</th>
                     <th>contact</th>
                     <th>gender</th>
+                    <th>age</th>
                     <th>address</th>
+                    <th>city</th>
+                    <th>Last Donated</th>
+
                 </thead>
                 <tbody>
                     <?php foreach ($donors as $i => $row) : ?>
@@ -139,7 +143,22 @@
                             <td><?php echo $row['name'] ?></td>
                             <td><?php echo $row['phone'] ?></td>
                             <td><?php echo $row['gender'] ?></td>
-                            <td><?php echo $row['presentAdd'] ?></td>
+                            <td><?php
+                                $bday = new DateTime($row['dob']); // Your date of birth
+                                $today = new Datetime(date('m.d.y'));
+                                $diff = $today->diff($bday);
+                                printf('%d years, %d month, %d days', $diff->y, $diff->m, $diff->d);
+                             
+                                ?></td>
+                            <td><?php echo $row['address'] ?></td>
+                            <td><?php echo $row['city'] ?></td>
+                            <td><?php
+                                $bday = new DateTime($row['lastDonate']); // Your date of birth
+                                $today = new Datetime(date('m.d.y'));
+                                $diff = $today->diff($bday);
+                                echo $diff->d." Ago";
+                             
+                                ?></td>
 
 
                         </tr>
