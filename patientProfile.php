@@ -17,9 +17,9 @@ if (!isset($_SESSION['id'])) {
     $stmt2->execute();
     $appointments = $stmt2->fetchAll();
 }
-// echo '<pre>';
-// var_dump($appointments);
-// echo '</pre>';
+    // echo '<pre>';
+    // var_dump($appointments);
+    // echo '</pre>';
 ?>
 <!DOCTYPE html>
 <html lang="en">
