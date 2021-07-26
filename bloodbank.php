@@ -148,16 +148,17 @@
                                 $today = new Datetime(date('m.d.y'));
                                 $diff = $today->diff($bday);
                                 printf('%d years, %d month, %d days', $diff->y, $diff->m, $diff->d);
-                             
+
                                 ?></td>
                             <td><?php echo $row['address'] ?></td>
                             <td><?php echo $row['city'] ?></td>
                             <td><?php
-                                $bday = new DateTime($row['lastDonate']); // Your date of birth
-                                $today = new Datetime(date('m.d.y'));
-                                $diff = $today->diff($bday);
-                                echo $diff->d." Ago";
-                             
+                                // Include end date in calculation (1 day is added)
+                                $start = strtotime($row['lastDonate']);
+                                $end = strtotime('today UTC');
+                                $days_between = ceil(abs($end - $start) / 86400);
+                                echo $days_between.' '.'ago';
+
                                 ?></td>
 
 
