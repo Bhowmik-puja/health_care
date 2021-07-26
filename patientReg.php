@@ -89,9 +89,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </div>
 
             <div class="gender">
-                <input type="radio" name="gender" value="male" id="male">Male
-                <input type="radio" name="gender" value="female" id="female">female
-                <input type="radio" name="gender" value="other" id="other">other
+                <input type="radio" name="gender" value="male" id="Male">Male
+                <input type="radio" name="gender" value="female" id="Female">female
+                <input type="radio" name="gender" value="other" id="Other">other
 
                 <select name="bloodgrp" class="blood_group">
                     <option value="A+">Blood Group :&ensp; A+</option>

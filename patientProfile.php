@@ -29,10 +29,13 @@ if (!isset($_SESSION['id'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/doctorProfile.css">
+
+    <link rel="stylesheet" href="css/style.css">
     <title>Patient Profile</title>
 </head>
 
 <body>
+<?php include_once "navbar.php"?>
     <section class="myProfile">
         <h1>My profile</h1>
         <div class="details-box">
@@ -50,7 +53,7 @@ if (!isset($_SESSION['id'])) {
                 <span>Contact Number:</span> <?php echo ' ' . $profile[0]['phone']; ?>
             </div>
             <div>
-                <span>Gender:</span><b><?php echo ' ' . $profile[0]['gender']; ?></b>
+                <span>Gender:</span><?php echo ' ' . $profile[0]['gender']; ?>
             </div>
             <div>
                 <span>Blood Group: </span><?php echo ' ' . $profile[0]['bloodGrp']; ?>

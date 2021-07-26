@@ -28,10 +28,12 @@ if (!isset($_SESSION['id'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/doctorProfile.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>doctor profile</title>
 </head>
 
 <body>
+<?php include_once "navbar.php"?>
 <section class="myProfile">
         <h1>My profile</h1>
         <div class="details-box">

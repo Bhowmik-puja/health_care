@@ -73,6 +73,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </head>
 
 <body>
+
     <div class="main">
         <div class="heading">
             Register as Doctor<br>
@@ -92,9 +93,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             <div class="gender">
                 <label>Gender: </label>
-                <input type="radio" name="gender" value="male" id="male" required>Male
-                <input type="radio" name="gender" value="female" id="female" required>female
-                <input type="radio" name="gender" value="other" id="other" required>other
+                <input type="radio" name="gender" value="Male" id="male" required>Male
+                <input type="radio" name="gender" value="Female" id="female" required>female
+                <input type="radio" name="gender" value="Other" id="other" required>other
 
                 <span>Date of Birth</span>
                 <input type="date" id="d" name="date"  required>
