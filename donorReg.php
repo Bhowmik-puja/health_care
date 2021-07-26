@@ -50,83 +50,76 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <link rel="stylesheet" href="css/donorReg.css">
-
+     <title>Donor Registation</title>
 </head>
 
 <body>
-     <div class="main">
-          <div class="heading">
-               <H3>Register as Donor</H3>
-          </div>
+     <div class="container">
 
           <form action="" onsubmit="return checkInputs()" method="post" autocomplete="on">
-               <fieldset>
-                    <legend>DONOR DETAILS</legend>
-                    <div class="name">
-                         <label for="">Full Name: </label>
+               
+                  <div class="heading">
+                      <h2>Register as Donor</h2>
+                          <p style="padding: 7px;">DONOR DETAILS</p> 
+                  </div>
+                    <div class="single-input">
                          <input type="text" name="name" placeholder="Full Name" required>
                     </div>
 
-                    <div class="email">
-                         <label for="">Email:</label>
+                    <div class="dobule-input">
                          <input type="email" name="email" placeholder="Email" required>
+                         <input type="text" name="phone" placeholder="Phone Number" required>
 
                     </div>
-                    <div class="phone">
-                         <label for="">Contact no:</label>
-                         <input type="text" name="phone" placeholder="Phone Number" required>
-                    </div>
+                    
                     <div class="gender">
-                         <label>Gender:</label>
-                         <div class="radio">
+                         
                               <input type="radio" name="gender" value="Male" id="male" required>Male
                               <input type="radio" name="gender" value="Female" id="female" required>female
                               <input type="radio" name="gender" value="Other" id="other" required>other
-                         </div>
-
-                    </div>
-                    <div class="bloodgrp">
-                         <label>Blood Group:</label>
-                         <select name="bg">
-                              <option value="A+">A+</option>
-                              <option value="O+">O+</option>
-                              <option value="B+">B+</option>
-                              <option value="AB+">AB+</option>
-                              <option value="A-">A-</option>
-                              <option value="O-">O-</option>
-                              <option value="B-">B-</option>
-                              <option value="AB-">AB-</option>
+                         
+                       
+                         <select name="bg" class="blood_group">
+                              <option value="A+">Blood Group:&nbsp A+</option>
+                              <option value="O+">Blood Group:&nbsp O+</option>
+                              <option value="B+">Blood Group:&nbsp B+</option>
+                              <option value="AB+">Blood Group:&nbsp AB+</option>
+                              <option value="A-">Blood Group:&nbsp A-</option>
+                              <option value="O-">Blood Group:&nbsp O-</option>
+                              <option value="B-">Blood Group:&nbsp B-</option>
+                              <option value="AB-">Blood Group:&nbsp AB-</option>
                          </select>
                     </div>
 
 
                     <div class="dob">
-                         <label>Date of Birth</label>&nbsp&nbsp&nbsp
-                         <input type="date" name="dob" id="" required>
+                         <span class="child_dob">Date of Birth</span>
+                         <input class="date_input" type="date" name="dob" id="" required>
                     </div>
 
-                    <div class="donation_date">
-                         <label>Last Donation</label>&nbsp&nbsp&nbsp
-                         <input type="date" name="lastdonate" id="" required>
+                    <div class="dob">
+                        <span class="child_dob">Last Donation</span>
+                         <input class="date_input1" type="date" name="lastdonate" id="" required>
                     </div>
 
-                    <div class="address">
-                         <label>Address</label>
+
+                    <div class="single-input">
                          <input type="text" name="address1" placeholder="Address" required></input>
                     </div>
-                    <div>
+
+                    <div class="single-input">
                     <input type="text" name="address2" placeholder="city"></input>
                     </div>
-                    <div class="doner_password">
+
+                    <div class="dobule-input">
                          <input type="password" name="password" placeholder="New password" id="password" required>
-                    </div>
-                    <div>
-                         <input type="password" name="cPassword" placeholder="Confirm Password" id="cpassword" required>
-                    </div>
 
-                    <input type="submit" value="Submit" name="submit">
-               </fieldset>
+                          <input type="password" name="cPassword" placeholder="Confirm Password" id="cpassword" required>
+                    </div>
+          
 
+                    <input class="btn_submit" type="submit" value="Submit" name="submit">
+          
 
           </form>
 
