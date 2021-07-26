@@ -71,17 +71,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <form action="" onsubmit="return checkInputs()" method="post" autocomplete="on">
 
             <div class="heading">
-                <h2>Register as Patient</h2>
-                Create a account free
+                <h3>Register as Patient</h3>
             </div>
 
             <div class="two-field">
-                <input id="fname" type="text" name="firstName" placeholder="First Name" require>
-                <input type="text" name="lastName" placeholder="Last Name" require>
+                <input id="fname" type="text" name="firstName" placeholder="First Name" required>
+                <input type="text" name="lastName" placeholder="Last Name" required>
             </div>
 
             <div class="email">
-                <input type="text" name="email" placeholder="Email" require>
+                <input type="email" name="email" placeholder="Email" required>
             </div>
 
             <div class="two-field">
@@ -118,8 +117,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </div>
 
             <div class="two-field">
-                <input type="text" name="city" placeholder="City/village" require>
-                <input type="text" name="district" placeholder="District" require>
+                <input type="text" name="city" placeholder="City/village" required>
+                <input type="text" name="district" placeholder="District" required>
             </div>
 
             <div class="two-field">

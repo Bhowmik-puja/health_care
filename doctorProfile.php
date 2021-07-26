@@ -48,7 +48,7 @@ if (!isset($_SESSION['id'])) {
                 <span>Contact Number: </span><?php echo ' ' . $profile[0]['phone']; ?> 
             </div>
             <div>
-                <span>Gender:</span><b><?php echo ' ' . $profile[0]['gender']; ?></b> 
+                <span>Gender:</span><?php echo ' ' . $profile[0]['gender']; ?>
             </div>
             <div>
                 <span>Date of Birth:</span><?php echo ' ' . $profile[0]['dob']; ?> 
