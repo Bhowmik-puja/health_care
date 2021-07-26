@@ -24,8 +24,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
      if ($stmthandler->rowCount() > 0) {
           echo "<script>alert('This email is already exists!!!!');</script>";
      } else {
-          $stmt = $pdo->prepare("INSERT INTO donors (name,email,phone,gender,bloodGrp,dob,lastDonate,presentAdd,permanentAdd,password ) 
-     VALUES (:name,:email,:phone,:gender,:bg,:lastdonate,:dob,:address,:city,:password)");
+          $stmt = $pdo->prepare("INSERT INTO donors (name,email,phone,gender,bloodGrp,dob,lastDonate,address,city,password ) 
+     VALUES (:name,:email,:phone,:gender,:bg,:dob,:lastdonate,:address,:city,:password)");
           $stmt->bindValue(':name', $name);
           $stmt->bindValue(':email', $email);
           $stmt->bindValue(':phone', $phone);
@@ -109,7 +109,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                </div>
                <div class="doner_password">
                     <input type="password" name="password" placeholder="New password" id="password" required>
-                    <input type="password" name="cPassword" placeholder="Confirm Password" id="cpassword" required>
+               </div>
+               <div>
+               <input type="password" name="cPassword" placeholder="Confirm Password" id="cpassword" required>
                </div>
 
                <input type="submit" value="Submit" name="submit">

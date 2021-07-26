@@ -22,11 +22,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $docName = $docStmt->fetchAll();
     // fetch complete \\\
     $doctorName = $docName[0]['name'];
-    $stmtIn = $pdo->prepare("INSERT INTO appointment (patientId,doctorId,doctorName,date,time, symptoms)
-        VALUES (:patientId,:docId,:dName,:date,:time,:symp)
+    $patientName = $_SESSION['name'].' '.$_SESSION['surname'];
+    $stmtIn = $pdo->prepare("INSERT INTO appointment (patientId,doctorId,doctorName,patientName,date,time, symptoms)
+        VALUES (:patientId,:docId,:dName,:pName,:date,:time,:symp)
     ");
     $stmtIn->bindValue(':docId', $doctorId);
     $stmtIn->bindValue(':dName', $doctorName);
+    $stmtIn->bindValue(':pName', $patientName);
     $stmtIn->bindValue(':patientId', $patientId);
     $stmtIn->bindValue(':symp', $symptom);
     $stmtIn->bindValue(':date', $date);

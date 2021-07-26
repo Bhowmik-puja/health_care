@@ -67,7 +67,13 @@ if (!isset($_SESSION['id'])) {
             <h4>Date of Birth:<?php echo ' ' . $profile[0]['dob']; ?> </h4>
         </div>
         <div>
-            <h4>Age: </h4>
+            <h4>Age: <?php
+                                $bday = new DateTime($profile[0]['dob']); // Your date of birth
+                                $today = new Datetime(date('m.d.y'));
+                                $diff = $today->diff($bday);
+                                printf('%d years, %d month, %d days', $diff->y, $diff->m, $diff->d);
+                             
+                                ?> </h4>
         </div>
         <div>
             <h4>Address: <?php echo ' ' . $profile[0]['address']; ?> </h4>

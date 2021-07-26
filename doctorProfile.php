@@ -35,47 +35,47 @@ if (!isset($_SESSION['id'])) {
 <section class="myProfile">
         <h1>My profile</h1>
         <div class="details-box">
-            <img src="images/demo.png" alt="">
+            <img src="images/dummy.jpg" alt="">
         </div>
         <div class="details-box">
             <div>
-                <h4>Name:<?php echo ' ' . $profile[0]['name']; ?> </h4>
+                <span>Name:</span><?php echo ' ' . $profile[0]['name']; ?>
             </div>
             <div>
-                <h4>Email:<?php echo ' ' . $profile[0]['email']; ?> </h4>
+                <span>Email:</span><?php echo ' ' . $profile[0]['email']; ?> 
             </div>
             <div>
-                <h4>Contact Number: <?php echo ' ' . $profile[0]['phone']; ?> </h4>
+                <span>Contact Number: </span><?php echo ' ' . $profile[0]['phone']; ?> 
             </div>
             <div>
-                <h4>Gender:<b><?php echo ' ' . $profile[0]['gender']; ?></b> </h4>
+                <span>Gender:</span><?php echo ' ' . $profile[0]['gender']; ?>
             </div>
             <div>
-                <h4>Date of Birth:<?php echo ' ' . $profile[0]['dob']; ?> </h4>
+                <span>Date of Birth:</span><?php echo ' ' . $profile[0]['dob']; ?> 
             </div>
             <!-- <div>
-                <h4>Age: </h4>
+                <span>Age: </span>
             </div> -->
             <div>
-                <h4>Specialist:<?php echo ' ' . $profile[0]['specialist']; ?> </h4>
+                <span>Specialist:</span><?php echo ' ' . $profile[0]['specialist']; ?> 
             </div>
             <div>
-                <h4>Degree: <?php echo ' ' . $profile[0]['degree']; ?> </h4>
+                <span>Degree: </span><?php echo ' ' . $profile[0]['degree']; ?> 
             </div>
             <div>
-                <h4>Present Status: <?php echo ' ' . $profile[0]['presentStatus']; ?> </h4>
+                <span>Present Status: </span><?php echo ' ' . $profile[0]['presentStatus']; ?> 
             </div>
             <div>
-                <h4>BMDC Registration No: <?php echo ' ' . $profile[0]['regNo']; ?> </h4>
+                <span>BMDC Registration No:</span> <?php echo ' ' . $profile[0]['regNo']; ?> 
             </div>
             <div>
-                <h4>Workplace: <?php echo ' ' . $profile[0]['workplace']; ?> </h4>
+                <span>Workplace:</span> <?php echo ' ' . $profile[0]['workplace']; ?> 
             </div>
             <div>
-                <h4>Chamber for patients: <?php echo ' ' . $profile[0]['chamber']; ?> </h4>
+                <span>Chamber for patients:  </span><?php echo ' ' . $profile[0]['chamber']; ?>
             </div>
             <div>
-                <h4>About Me: <?php echo ' ' . $profile[0]['about']; ?> </h4>
+                <span>About Me: </span><?php echo ' ' . $profile[0]['about']; ?> 
             </div>
         </div>
 
@@ -85,7 +85,7 @@ if (!isset($_SESSION['id'])) {
                 <thead>
                     <tr>
                         <th scope="col">Serial</th>
-                        <th scope="col">Doctor Name</th>
+                        <th scope="col">Patient Name</th>
                         <th scope="col">Date</th>
                         <th scope="col">time</th>
                     </tr>
@@ -94,7 +94,7 @@ if (!isset($_SESSION['id'])) {
                     <?php foreach ($appointments as $i => $row) : ?>
                         <tr>
                             <th><?PHP echo $i + 1; ?></th>
-                            <td><?php echo $row['doctorName'] ?></td>
+                            <td><?php echo $row['patientName'] ?></td>
                             <td><?php echo $row['date'] ?></td>
                             <td><?php echo $row['time'] ?></td>
                         </tr>
