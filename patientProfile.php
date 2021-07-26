@@ -98,6 +98,7 @@ if (!isset($_SESSION['id'])) {
                 </tbody>
             </table>
         </div>
+        <p style="margin-top: 20px;"></p>
     </section>
 </body>
 

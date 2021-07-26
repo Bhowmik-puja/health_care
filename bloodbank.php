@@ -51,18 +51,39 @@
             margin-top: 50px;
         }
 
-        table,
-        td,
-        th {
-            border: 1px solid red;
-            text-align: center;
-            font-size: 20px;
-        }
 
         table {
-            width: 100%;
-            border-collapse: collapse;
+          border-collapse: collapse;
+          font-size: 15px;
+          width: 90%;
+          margin: auto;
+
         }
+
+        td, th {
+          border: 1px solid rgb(27, 24, 24);
+          padding: 0.5rem;
+          padding: 8px;
+        }
+
+        td{
+          text-align: left;
+        }
+
+        th {
+          background-color: #04AA6D;
+          color: white;
+          text-align: center;
+        }
+
+        tr:hover {background-color:gold;}
+
+        .details-box #box-border{
+          border: 1px solid gray;
+          background-color: cyan;
+        }
+
+        
     </style>
 
     <!--  for navbar style -->
