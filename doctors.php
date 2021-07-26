@@ -59,7 +59,7 @@ $doctors = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         <h4><?php echo ' ' . $doctor['presentStatus']; ?></h4>
                         <br>
                         <br>
-                        <a href="">Book Appointment</a>
+                        <a href="appointment.php">Book Appointment</a>
                     </div>
 
                 </div>

@@ -17,9 +17,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($stmt->rowCount() > 0) {
         $_SESSION['userlogin'] = 0;
         $_SESSION['name'] = $profiles[0]['firstName'];
+        $_SESSION['surname'] =$profiles[0]['lastName'];
         $_SESSION['id'] = $profiles[0]['id'];
-        // var_dump($_SESSION['id']);
-        header("location: index.php");
+       
+        header("location: index.php ");
     } else {
         echo "<script>alert('Invalid email or password')</script>";
     }
