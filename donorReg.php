@@ -37,7 +37,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
           $stmt->bindValue(':city', $address2);
           $stmt->bindValue('password', $password);
           $stmt->execute(header("location: index.php"));
-         
      }
 }
 
@@ -50,71 +49,84 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Doner Registation Form</title>
-     <style>
-          * {
-               margin: 5px;
-               padding: 2px;
-          }
-     </style>
+     <link rel="stylesheet" href="css/donorReg.css">
+
 </head>
 
 <body>
      <div class="main">
           <div class="heading">
-               Register as Donor<br>
+               <H3>Register as Donor</H3>
           </div>
 
           <form action="" onsubmit="return checkInputs()" method="post" autocomplete="on">
-               <div class="name_child">
-                    <input type="text" name="name" placeholder="Full Name" required>
-               </div>
+               <fieldset>
+                    <legend>DONOR DETAILS</legend>
+                    <div class="name">
+                         <label for="">Full Name: </label>
+                         <input type="text" name="name" placeholder="Full Name" required>
+                    </div>
 
-               <div class="email">
-                    <input type="text" name="email" placeholder="Email" required>
-                    <input type="text" name="phone" placeholder="Phone Number" required>
-               </div>
-               <div class="gender">
-                    <span>Gender</span>
-                    <input type="radio" name="gender" value="male" id="male" required>Male
-                    <input type="radio" name="gender" value="female" id="female" required>female
-                    <input type="radio" name="gender" value="other" id="other" required>other
-               </div>
-               <span>Blood Group</span>
-               <select name="bg">
-                    <option value="A+">A+</option>
-                    <option value="O+">O+</option>
-                    <option value="B+">B+</option>
-                    <option value="AB+">AB+</option>
-                    <option value="A-">A-</option>
-                    <option value="O-">O-</option>
-                    <option value="B-">B-</option>
-                    <option value="AB-">AB-</option>
-               </select>
+                    <div class="email">
+                         <label for="">Email:</label>
+                         <input type="email" name="email" placeholder="Email" required>
 
-               <div class="dob">
-                    <span>Date of Birth</span>
-                    <input type="date" name="dob" id="" required>
-               </div>
+                    </div>
+                    <div class="phone">
+                         <label for="">Contact no:</label>
+                         <input type="text" name="phone" placeholder="Phone Number" required>
+                    </div>
+                    <div class="gender">
+                         <label>Gender:</label>
+                         <div class="radio">
+                              <input type="radio" name="gender" value="male" id="male" required>Male
+                              <input type="radio" name="gender" value="female" id="female" required>female
+                              <input type="radio" name="gender" value="other" id="other" required>other
+                         </div>
 
-               <div class="donation_date">
-                    <span>Last Donation</span>
-                    <input type="date" name="lastdonate" id="" required>
-               </div>
+                    </div>
+                    <div class="bloodgrp">
+                         <label>Blood Group:</label>
+                         <select name="bg">
+                              <option value="A+">A+</option>
+                              <option value="O+">O+</option>
+                              <option value="B+">B+</option>
+                              <option value="AB+">AB+</option>
+                              <option value="A-">A-</option>
+                              <option value="O-">O-</option>
+                              <option value="B-">B-</option>
+                              <option value="AB-">AB-</option>
+                         </select>
+                    </div>
 
-               <div class="Address">
-                    <span>Address</span> <br>
-                    <textarea type="text" name="address1" placeholder="Address" required></textarea>
-                    <textarea type="text" name="address2" placeholder="city"></textarea>
-               </div>
-               <div class="doner_password">
-                    <input type="password" name="password" placeholder="New password" id="password" required>
-               </div>
-               <div>
-               <input type="password" name="cPassword" placeholder="Confirm Password" id="cpassword" required>
-               </div>
 
-               <input type="submit" value="Submit" name="submit">
+                    <div class="dob">
+                         <label>Date of Birth</label>&nbsp&nbsp&nbsp
+                         <input type="date" name="dob" id="" required>
+                    </div>
+
+                    <div class="donation_date">
+                         <label>Last Donation</label>&nbsp&nbsp&nbsp
+                         <input type="date" name="lastdonate" id="" required>
+                    </div>
+
+                    <div class="address">
+                         <label>Address</label>
+                         <input type="text" name="address1" placeholder="Address" required></input>
+                    </div>
+                    <div>
+                    <input type="text" name="address2" placeholder="city"></input>
+                    </div>
+                    <div class="doner_password">
+                         <input type="password" name="password" placeholder="New password" id="password" required>
+                    </div>
+                    <div>
+                         <input type="password" name="cPassword" placeholder="Confirm Password" id="cpassword" required>
+                    </div>
+
+                    <input type="submit" value="Submit" name="submit">
+               </fieldset>
+
 
           </form>
 
