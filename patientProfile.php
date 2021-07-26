@@ -28,26 +28,18 @@ if (!isset($_SESSION['id'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        table,
-        td,
-        th {
-            border: 1px solid black;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-    </style>
-    <title>Document</title>
+     <link rel="stylesheet" href="css/doctorProfile.css">
+    <title>Patient Profile</title>
 </head>
 
 <body>
-    <div>
-        <img src="images/dummy.jpg" alt="">
+    <section class="myProfile">
+    <h1>My profile</h1>
+    <div class="details-box">
+        <img src="images/demoPatient.jpg" alt="">
     </div>
-    <div>
+
+    <div class="details-box">
         <div>
             <h4>Name:<?php echo ' ' . $profile[0]['firstName'] . ' ' . $profile[0]['lastName']; ?> </h4>
         </div>
@@ -79,9 +71,10 @@ if (!isset($_SESSION['id'])) {
             <h4>Address: <?php echo ' ' . $profile[0]['address']; ?> </h4>
         </div>
     </div>
-    <div>
-        <h3 style="text-align: center;">Appointment Dashboard:</h3>
+
+    <div class="table-box">
         <table class="table">
+            <caption>Appointment Dashboard:</caption>
             <thead>
                 <tr>
                     <th scope="col">Serial</th>
@@ -102,6 +95,7 @@ if (!isset($_SESSION['id'])) {
             </tbody>
         </table>
     </div>
+ </section>
 </body>
 
 </html>
