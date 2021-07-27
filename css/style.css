@@ -137,3 +137,37 @@ footer {
     box-sizing: border-box;
     background-color: white;
 }
+
+
+ /******** Footer Page CSS**********/
+
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 20px;
+    background-color: #2E4053;
+    color: white;
+    margin-top: 70px;
+    margin-bottom: 5px;
+
+    }
+
+  .footer h4{
+    margin-bottom: 15px;
+    margin-top: 10px;
+    font-size: 24px;
+    }
+
+  .icons .fa{
+    color: #f44336;
+    margin: 8px;
+    cursor: pointer;
+    padding: 15px 0;
+    font-size: 20px;
+   
+    }
+
+  .fa-heart-o{
+    color: #f44336;
+   }
