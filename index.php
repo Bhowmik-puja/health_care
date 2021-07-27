@@ -17,6 +17,7 @@ session_start();
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <link rel="stylesheet" href="css/meetDoctor.css">
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script><!-- for blood icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <title>Health Care</title>
 </head>
 
@@ -99,11 +100,27 @@ session_start();
 
     </section>
 
+
+
+
+  <!------ ------------Footer------------------------------>
+
+  <section class="footer">
+        <h4>Contract with us</h4>
+        <p>You can contact with us in any need, We will be happy. We are always by your side in your need.</p>
+        <div class="icons">
+            <a href="#" target="_blank"><i class="fa fa-envelope"></a></i>
+            <a href="https://web.facebook.com/shorifulislam.ridoy.773" target="_blank"><i class="fa fa-facebook-square"></a></i>
+            <a href="https://www.instagram.com/?hl=ru" target="_blank"><i class="fa fa-instagram"></a></i>
+            <a href="https://https://bit.ly/30nxsXM" target="_blank"><i class="fa fa-whatsapp"></a></i>
+            <a href="#" target="_blank"><i class="fa fa-twitter"></a></i>
+            <a href="#" target="_blank"><i class="fa fa-linkedin"></a></i>
+
+
+            <div>
+                <p>Copyright <span>&copy</span>2021<i class="fa fa-heart-o"></i>by Puja Bhowmik & Shoriful Islam</p>
+            </div>
+        </div>
+    </section>   
 </body>
-<footer>
-
-</footer>
-</body>
-
-
 </html>
