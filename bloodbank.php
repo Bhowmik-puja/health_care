@@ -30,7 +30,7 @@
         .grid-container {
             display: grid;
             grid-template-columns: auto auto auto;
-            background-color: red;
+            background-color: whitesmoke;
             padding: 50px;
             width: 50%;
             margin: auto;
@@ -38,13 +38,15 @@
         }
 
         .grid-item {
-
-            background-color: white;
-            border: 1px solid rgba(0, 0, 0, 0.8);
+            background-color: red;
             padding: 20px;
             margin: 10px;
             font-size: 25px;
             text-align: center;
+            color: white;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
         }
 
         .donor {
@@ -71,7 +73,7 @@
         }
 
         th {
-          background-color: #04AA6D;
+          background-color: red;
           color: white;
           text-align: center;
         }
@@ -83,7 +85,6 @@
           background-color: cyan;
         }
 
-        
     </style>
 
     <!--  for navbar style -->
@@ -147,13 +148,14 @@
             <table>
                 <thead>
                     <th>no</th>
-                    <th>name</th>
-                    <th>contact</th>
-                    <th>gender</th>
-                    <th>age</th>
-                    <th>address</th>
-                    <th>city</th>
+                    <th>Name</th>
+                    <th>Contact No</th>
+                    <th>Gender</th>
+                    <th>Age</th>
+                    <th>Address</th>
+                    <th>City</th>
                     <th>Last Donated</th>
+                    <th>Status</th>
 
                 </thead>
                 <tbody>
@@ -181,9 +183,11 @@
                                 echo $days_between.' '.'ago';
 
                                 ?></td>
+                                <td><?php  echo ($days_between > 120) ?"Can donate": "Can't donate" ;?> </td>
 
 
                         </tr>
+                      
                     <?php endforeach; ?>
                 </tbody>
             </table>
