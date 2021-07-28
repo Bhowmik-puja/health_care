@@ -1,7 +1,6 @@
 * {
     margin: 0px;
     padding: 0px;
-    padding-left: 8px;
     box-sizing: border-box;
     font-family: 'Oswald', sans-serif;
 }
@@ -21,6 +20,7 @@ span{
   }
 
 .container {
+    margin-top: 20px;
     margin-left: 60px;
     width: 680px;
     /* max-width: 90%; */
@@ -154,4 +154,40 @@ a {
     margin-bottom: 4px;
     border: 1px solid black;
     border-radius: 5px;
+}
+
+
+/* for navbar */
+
+.website-name {
+    font-family: 'Pacifico', cursive;
+    font-size: 46px;
+    font-weight: normal;
+}
+nav {
+    height: 90px;
+    background-color: white;
+    display: flex;
+    padding: 0 10%;
+    justify-content: space-between;
+    
+}
+
+.navbar {
+
+    flex: 1;
+    text-align: right
+}
+
+nav a {
+    color: brown;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 40px 15px 8px 10px;
+    position: relative;
 }

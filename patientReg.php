@@ -61,11 +61,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/patientReg.css">
+    <!-- for font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <title>Registration Form</title>
 </head>
 
 
 <body>
+
+    <?php include_once "navbar.php" ?>
+
+
     <div class="container">
 
         <form action="" onsubmit="return checkInputs()" method="post" autocomplete="on">
@@ -133,16 +142,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </div>
             <div class="btn">
                 <input class="btn_submit" type="submit" value="Submit">
-                
+
             </div>
 
 
             <hr class="horiz">
 
-            
+
             <div class="link_field">
-                <a href="doctorReg.php"> or Register As Doctor<span>||</span></a>
-                
+                <a href="doctorReg.php"> or Register As Doctor</a>
+
 
             </div>
             <div style="font-size: 20px;">

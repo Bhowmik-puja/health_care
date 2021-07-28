@@ -69,11 +69,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/doctorReg.css">
     <script type="text/javascript" src="validation.js"></script>
+    <!-- for font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <title>Doctor Registation Form</title>
 </head>
 
 <body>
-
+<?php include_once "navbar.php" ?>
     <div class="main">
         <div class="heading">
             Register as Doctor<br>

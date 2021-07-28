@@ -89,3 +89,38 @@ input[type=submit]{
 
     
 }
+
+/* for navbar */
+
+.website-name {
+    font-family: 'Pacifico', cursive;
+    font-size: 46px;
+    font-weight: normal;
+}
+nav {
+    height: 90px;
+    background-color: white;
+    display: flex;
+    padding: 0 10%;
+    justify-content: space-between;
+    
+}
+
+.navbar {
+
+    flex: 1;
+    text-align: right
+}
+
+nav a {
+    color: brown;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 40px 15px 8px 10px;
+    position: relative;
+}

@@ -10,12 +10,13 @@ session_start();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css"> 
+    <link rel="stylesheet" href="css/meetDoctor.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-    <link rel="stylesheet" href="css/meetDoctor.css">
+   
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script><!-- for blood icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <title>Health Care</title>
@@ -32,8 +33,8 @@ session_start();
             <div class="box">
                 <div class="icon"><i class='far fa-calendar-alt' style='font-size:36px; text-align:center;'></i></div>
                 <div class="content">
-                    <h3>BOOK  AN   APPOINTMENT</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore quas distinctio illo voluptatibus ipsa praesentium et eius obcaecati a error. Fugit expedita iure blanditiisvoluptatum! Error, impedit.</p>
+                    <h3>BOOK  AN   APPOINTMENT</h3><br>
+                    <p>Consult With A Doctor Anywhere, Anytime</p>
                     <button class="click-btn"><a href="<?php echo isset($_SESSION['id'] ) ? "appointment.php":"patientlogin.php"; ?>">Click here</a></button>
 
                 </div>
@@ -42,8 +43,8 @@ session_start();
             <div class="box">
                 <div class="icon"><i class="fa fa-user-md" style="font-size:36px;"></i></div>
                 <div class="content">
-                    <h3>FIND A DOCTOR</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore quas distinctio illo voluptatibus ipsa praesentium et eius obcaecati a error. Fugit expedita iure blanditiisvoluptatum! Error, impedit.</p>
+                    <h3>FIND A DOCTOR</h3><br>
+                    <p>Available doctors list</p>
                     <button class="click-btn"><a href="doctors.php">Click here</a></button>
 
                 </div>
@@ -52,8 +53,8 @@ session_start();
             <div class="box">
                 <div class="icon"><span class="iconify" data-icon="maki-blood-bank" data-inline="false" style="font-size:36px;"></span></div>
                 <div class="content">
-                    <h3>BLOOD BANK</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore quas distinctio illo voluptatibus ipsa praesentium et eius obcaecati a error. Fugit expedita iure blanditiisvoluptatum! Error, impedit. </p>
+                    <h3>BLOOD BANK</h3> <br>
+                    <p>Donate Blood Save Life</p>
                     <button class="click-btn"><a href="bloodbank.php">Click here</a></button>
                 </div>
             </div>
@@ -118,7 +119,7 @@ session_start();
 
 
             <div>
-                <p>Copyright <span>&copy</span>2021<i class="fa fa-heart-o"></i>by Puja Bhowmik & Shoriful Islam</p>
+                <p>Copyright <span>&copy</span>2021<i class="fa fa-heart-o"></i>by Team anonymous</p>
             </div>
         </div>
     </section>   
