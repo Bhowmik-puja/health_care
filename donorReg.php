@@ -50,10 +50,27 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <link rel="stylesheet" href="css/donorReg.css">
+     <!--  for navbar style -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
      <title>Donor Registation</title>
 </head>
 
 <body>
+<header>
+        <nav>
+            <a href="index.php"><span class="website-name">Health Care</span></a>
+            <q>Donate Blood Save Life</q>
+
+            <div class="navbar">
+                <ul>
+                    <li>
+                        <a href="donorlogin.php"><b>Login As Donor</b> </a>
+                    </li>
+                </ul>
+    </header>
+    <hr>
      <div class="container">
 
           <form action="" onsubmit="return checkInputs()" method="post" autocomplete="on">

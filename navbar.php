@@ -27,6 +27,7 @@
                         <a class="btn" href="<?php
                                                 if ($_SESSION["userlogin"] == 1) echo "doctorProfile.php";
                                                 else if ($_SESSION["userlogin"] == 0) echo "patientProfile.php";
+                                                else if ($_SESSION["userlogin"] == 3) echo "donorProfile.php";
                                                 else echo "admin.php";
                                                 ?>"> <i class='fas fa-user-circle'></i> <?php echo  $_SESSION['name'] ?? "ADMIN"; ?></a>
                     </li>

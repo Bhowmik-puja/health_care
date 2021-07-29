@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -103,11 +104,18 @@
             <q>Donate Blood Save Life</q>
 
             <div class="navbar">
+                <?php if(!isset($_SESSION['userlogin'])):?>
                 <ul>
+                    
+                    <li>
+                        <a href="donorlogin.php"><b>Login</b></a>
+                    </li>
+                    <span>or</span>
                     <li>
                         <a href="donorReg.php"><b>Register As Donor</b> </a>
                     </li>
-                </ul>
+                   
+                </ul> <?php endif;?>
     </header>
     <hr>
     <section>

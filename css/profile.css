@@ -107,3 +107,10 @@ th {
 }
 
 tr:hover {background-color:gold;}
+
+/* donor profile */
+input{
+  padding: 5px;
+  font-size: 16px;
+  color: black;
+}
