@@ -57,7 +57,7 @@ if (!isset($_SESSION['id'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/donorProfile.css">
     <link rel="stylesheet" href="css/style.css">
     <title>doctor profile</title>
 </head>
@@ -71,23 +71,29 @@ if (!isset($_SESSION['id'])) {
         </div>
         <div class="details-box">
             <form method="post" enctype="multipart/form-data">
-                <div>
+                <div class="single-input">
                     <span>Name:</span><input type="text" name="name" value="<?php echo $name; ?>" <?php echo $disable; ?>>
                 </div>
-                <div>
+
+                <div class="single-input">
                     <span>Email:</span><input type="text" name="email" value="<?php echo $email; ?>" disabled>
                 </div>
-                <div>
+
+                <div class="single-input">
                     <span>Contact Number: </span><input type="text" name="phone" value="<?php echo $phone; ?>" <?php echo $disable; ?>>
                 </div>
-                <div>
+
+                <div class="single-input">
                     <span>Gender:</span><input type="text" name="" value="<?php echo $gender; ?>" <?php echo $disable; ?>>
                 </div>
-                <div>
+
+                <div class="single-input">
                     <span>Date of Birth:</span><input type="date" name="dob" value="<?php echo $dob; ?>" <?php echo $disable; ?>>
                 </div>
-                <div>
-                    <span>Age: </span><?php
+                <br>
+
+                <div class="single-input">
+                    <span>Age: </span> <?php
                                         $bday = new DateTime($profile[0]['dob']); // Your date of birth
                                         $today = new Datetime(date('m.d.y'));
                                         $diff = $today->diff($bday);
@@ -95,27 +101,28 @@ if (!isset($_SESSION['id'])) {
 
                                         ?>
                 </div>
-                <div>
+                <br>
+
+                <div class="single-input">
                     <span>Last date of donation:</span><input type="date" name="lod" value="<?php echo $lod; ?>" <?php echo $disable; ?>>
                 </div>
-                <div>
+
+                <div class="single-input">
                     <span>Address:</span><input type="text" name="add" value="<?php echo $add; ?>" <?php echo $disable; ?>>
                 </div>
-                <div>
+
+                <div class="single-input">
                     <span>City:</span><input type="text" name="city" value="<?php echo $city; ?>" <?php echo $disable; ?>>
                 </div><br>
-                <div>
+
+                <div class="btn_submit">
                     <a href="donorProfile.php?status=<?php echo "edit" ?>" class="btn btn-sm btn-outline-primary">Edit</a>
-                </div>
-                <br>
-                <div style="display: inline-block;">
+                
                     <input type="submit" name="submit" value="Save" id="" class="btn btn-success">
-            </form>
-        </div>
+                </div>
 
-        </div>
-
-
+        </form>
+     </div>
     </section>
     <br>
 </body>
