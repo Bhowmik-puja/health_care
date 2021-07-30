@@ -6,16 +6,18 @@ if (!isset($_SESSION['id'])) {
 } else {
 
     $pdo = require_once "database.php";
+
     $id = $_SESSION['id'];
     $stmt = $pdo->prepare("SELECT * FROM patients WHERE id = :id");
     $stmt->bindValue(':id', $id);
     $stmt->execute();
     $profile = $stmt->fetchAll(PDO::FETCH_ORI_FIRST);
+
     $patientId = $id;
     $stmt2 = $pdo->prepare("SELECT * FROM appointment WHERE patientId = :id");
     $stmt2->bindValue(':id', $patientId);
     $stmt2->execute();
-    $appointments = $stmt2->fetchAll();
+    $appointments = $stmt2->fetchAll(PDO::FETCH_ASSOC);
 }
 // echo '<pre>';
 // var_dump($appointments);
@@ -66,7 +68,7 @@ if (!isset($_SESSION['id'])) {
                                     $bday = new DateTime($profile[0]['dob']); // Your date of birth
                                     $today = new Datetime(date('m.d.y'));
                                     $diff = $today->diff($bday);
-                                    printf('%d years, %d month, %d days', $diff->y, $diff->m, $diff->d);
+                                    printf('%d years', $diff->y);
 
                                     ?>
             </div>

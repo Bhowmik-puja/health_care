@@ -6,6 +6,7 @@ if (!isset($_SESSION['id'])) {
 } else {
 
     $pdo = require_once "database.php";
+    
     $id = $_SESSION['id'];
     $stmt = $pdo->prepare("SELECT * FROM donors WHERE id = :id");
     $stmt->bindValue(':id', $id);
