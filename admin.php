@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (!isset($_SESSION['userlogin']) && $_SESSION['userlogin'] !=2) {
+if (!isset($_SESSION['userlogin']) && $_SESSION['userlogin'] != 2) {
     echo "Access Denied";
     exit();
 } else {
@@ -11,7 +11,11 @@ if (!isset($_SESSION['userlogin']) && $_SESSION['userlogin'] !=2) {
 
     $stmt = $pdo->prepare('SELECT * FROM patients ORDER BY id ');
     $stmt->execute();
-    $patients=$stmt->fetchAll(PDO::FETCH_ASSOC);
+    $patients = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    $stmt = $pdo->prepare('SELECT * FROM donors ORDER BY id ');
+    $stmt->execute();
+    $donors = $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 
 ?>
@@ -78,11 +82,11 @@ if (!isset($_SESSION['userlogin']) && $_SESSION['userlogin'] !=2) {
         </table>
     </div>
 
-<div style="height: 100px;">
+    <div style="height: 100px;">
 
-</div>
+    </div>
 
-<div>
+    <div>
         <h3 style="text-align: center;">All Registered Patients:</h3>
         <table class="table">
             <thead>
@@ -101,19 +105,61 @@ if (!isset($_SESSION['userlogin']) && $_SESSION['userlogin'] !=2) {
                 <?php foreach ($patients as $i => $row) : ?>
                     <tr>
                         <th><?PHP echo $i + 1; ?></th>
-                        <td><?php echo $row['firstName'].' '.$row['lastName']; ?></td>
+                        <td><?php echo $row['firstName'] . ' ' . $row['lastName']; ?></td>
                         <td><?php echo $row['email'] ?></td>
                         <td><?php echo $row['phone'] ?></td>
                         <td><?php echo $row['gender'] ?></td>
                         <td><?php echo $row['bloodGrp'] ?></td>
                         <td><?php echo $row['dob'] ?></td>
-                        <td><?php echo $row['address'].' , '.$row['city'] ?></td>
-                        
+                        <td><?php echo $row['address'] . ' , ' . $row['city'] ?></td>
+
 
                     </tr>
                 <?php endforeach; ?>
             </tbody>
         </table>
+    </div>
+
+    <div style="height: 100px;">
+
+    </div>
+
+    <div>
+        <h3 style="text-align: center;">All Registered Donors:</h3>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Phone</th>
+                    <th scope="col">Gender</th>
+                    <th scope="col">Blood Group</th>
+                    <th scope="col">Date of Birth</th>
+                    <th scope="col">Address</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach ($donors as $i => $row) : ?>
+                    <tr>
+                        <th><?PHP echo $i + 1; ?></th>
+                        <td><?php echo $row['name'] ?></td>
+                        <td><?php echo $row['email'] ?></td>
+                        <td><?php echo $row['phone'] ?></td>
+                        <td><?php echo $row['gender'] ?></td>
+                        <td><?php echo $row['bloodGrp'] ?></td>
+                        <td><?php echo $row['dob'] ?></td>
+                        <td><?php echo $row['address'] . ' , ' . $row['city'] ?></td>
+
+
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
+    </div>
+
+    <div style="height: 100px;">
+
     </div>
 
 </body>
