@@ -60,7 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                             <div class="form-group">
                                 <br>
                                 <input type="submit" name="submit" class="btn btn-info btn-md" value="submit"><br>
-                                <span></span><a href="doctorlogin.php">Back to home</a>
+                                <span></span><a href="bloodbank.php">Back to home</a>
                             </div>
                             <div id="register-link" class="text-right">
                                 <span>Don't have an account?</span>
