@@ -44,7 +44,7 @@ session_start();
                 <div class="icon"><i class="fa fa-user-md" style="font-size:36px;"></i></div>
                 <div class="content">
                     <h3>FIND A DOCTOR</h3><br>
-                    <p>Available doctors list</p>
+                    <p>Available doctors list. See doctor detail and select for appointment</p>
                     <button class="click-btn"><a href="doctors.php">Click here</a></button>
 
                 </div>
@@ -54,7 +54,7 @@ session_start();
                 <div class="icon"><span class="iconify" data-icon="maki-blood-bank" data-inline="false" style="font-size:36px;"></span></div>
                 <div class="content">
                     <h3>BLOOD BANK</h3> <br>
-                    <p>Donate Blood Save Life</p>
+                    <p>Donate Blood Save Life. Also register yourself as a donor. Or login your profile to edit details</p>
                     <button class="click-btn"><a href="bloodbank.php">Click here</a></button>
                 </div>
             </div>
