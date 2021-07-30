@@ -17,6 +17,9 @@
                     <li>
                         <a href="patientReg.php">SignIn</a>
                     </li>
+                    <li>
+                        <a href="adminlogin.php">ADMIN</a>
+                    </li>
                 <?php endif; ?>
                 <?php
                 if (isset($_SESSION["userlogin"])) : ?>

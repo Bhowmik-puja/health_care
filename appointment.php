@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $docStmt = $pdo->prepare('SELECT * FROM doctors where id = :docId');
     $docStmt->bindValue(':docId', $doctorId);
     $docStmt->execute();
-    $docName = $docStmt->fetchAll();
+    $docName = $docStmt->fetchAll(PDO::FETCH_ASSOC);
     // fetch complete \\\
     $doctorName = $docName[0]['name'];
     $patientName = $_SESSION['name'].' '.$_SESSION['surname'];

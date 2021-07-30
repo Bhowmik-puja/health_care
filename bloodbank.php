@@ -147,7 +147,7 @@
             $stmt = $pdo->prepare("SELECT * FROM donors WHERE  bloodGrp= :bg");
             $stmt->bindValue(':bg', $bg);
             $stmt->execute();
-            $donors = $stmt->fetchAll();
+            $donors = $stmt->fetchAll(PDO::FETCH_ASSOC);
         }
         ?>
 
@@ -188,7 +188,7 @@
                                 $start = strtotime($row['lastDonate']);
                                 $end = strtotime('today UTC');
                                 $days_between = ceil(abs($end - $start) / 86400);
-                                echo $days_between.' '.'ago';
+                                echo $days_between.' '.'days ago';
 
                                 ?></td>
                                 <td><?php  echo ($days_between > 120) ?"Can donate": "Can't donate" ;?> </td>

@@ -17,6 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $district = $_POST['district'];
     // $image = $_POST['image'];
     $password = $_POST['password'];
+
     //  check if email already exist or not \\
     $stmthandler = $pdo->prepare("SELECT * FROM patients WHERE email = :email");
     $stmthandler->bindValue(':email', $email);
@@ -46,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $stmt->bindValue(':password', $password);
         $stmt->execute(header('location:patientlogin.php'));
     }
-    // 
+
 }
 ?>
 <!DOCTYPE html>
